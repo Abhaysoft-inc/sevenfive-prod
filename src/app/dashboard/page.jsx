@@ -299,8 +299,68 @@ const Dashboard = () => {
 
     const renderHomeTab = () => (
         <>
+            <div className="mt-6 scheduletoday">
+                <p className="text-xl font-semibold">Today's Schedule</p>
+
+                {todaySchedules.length === 0 ? (
+                    <div className="bg-slate-200 w-full py-10 mt-3 rounded">
+                        <p className="text-center">No classes today, chill!</p>
+                    </div>
+                ) : (
+                    todaySchedules.map((schedule) => (
+                        <div key={schedule.id} className="w-full py-0.5 mt-1 rounded px-2">
+                            <div className="bg-white shadow-lg border border-gray-200 flex justify-between px-6 py-4 rounded-lg">
+                                <div className="flex items-center space-x-4">
+                                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                        <CircleMinus size={24} className="text-blue-600" />
+                                    </div>
+                                    <div>
+                                        <p className="text-[20px] rounded font-[500] text-gray-800">{schedule.subject.name}</p>
+                                        <p className="text-sm text-gray-500">
+                                            {schedule.startTime} - {schedule.endTime}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="icons flex gap-3 items-center">
+                                    <button
+                                        onClick={() => markAttendance(schedule.subject.id, 'CANCELLED')}
+                                        className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'CANCELLED'
+                                                ? 'bg-amber-200 shadow-md border-2 border-amber-400'
+                                                : 'bg-amber-50 hover:bg-amber-100 border border-amber-200'
+                                            }`}
+                                        title="Class Cancelled"
+                                    >
+                                        <CircleMinus color="#f59e0b" size={24} />
+                                    </button>
+                                    <button
+                                        onClick={() => markAttendance(schedule.subject.id, 'PRESENT')}
+                                        className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'PRESENT'
+                                                ? 'bg-emerald-200 shadow-md border-2 border-emerald-400'
+                                                : 'bg-emerald-50 hover:bg-emerald-100 border border-emerald-200'
+                                            }`}
+                                        title="Present"
+                                    >
+                                        <CircleCheck color="#10b981" size={24} />
+                                    </button>
+                                    <button
+                                        onClick={() => markAttendance(schedule.subject.id, 'ABSENT')}
+                                        className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'ABSENT'
+                                                ? 'bg-rose-200 shadow-md border-2 border-rose-400'
+                                                : 'bg-rose-50 hover:bg-rose-100 border border-rose-200'
+                                            }`}
+                                        title="Absent"
+                                    >
+                                        <CircleX color="#f43f5e" size={24} />
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    ))
+                )}
+            </div>
+
             {/* Attendance Overview */}
-            <div className="mt-6">
+            <div className="mt-8">
                 <p className="text-xl font-semibold mb-4">Attendance Overview</p>
 
                 <div className="bg-white rounded-lg shadow-md p-4 mb-6">
@@ -343,55 +403,6 @@ const Dashboard = () => {
                         </div>
                     )}
                 </div>
-            </div>
-
-            <div className="scheduletoday">
-                <p className="text-xl font-semibold">Today's Schedule</p>
-
-                {todaySchedules.length === 0 ? (
-                    <div className="bg-slate-200 w-full py-10 mt-3 rounded">
-                        <p className="text-center">No classes today, chill!</p>
-                    </div>
-                ) : (
-                    todaySchedules.map((schedule) => (
-                        <div key={schedule.id} className="w-full py-0.5 mt-1 rounded px-2">
-                            <div className="shadow-md flex justify-between px-6 py-4 rounded">
-                                <div className="flex items-center space-x-4">
-                                    <CircleMinus size={30} />
-                                    <div>
-                                        <p className="text-[20px] rounded font-[400]">{schedule.subject.name}</p>
-                                        <p className="text-sm text-gray-600">
-                                            {schedule.startTime} - {schedule.endTime}
-                                        </p>
-                                    </div>
-                                </div>
-                                <div className="icons flex gap-2 items-center">
-                                    <button
-                                        onClick={() => markAttendance(schedule.subject.id, 'CANCELLED')}
-                                        className={`p-1 rounded ${attendance[schedule.subject.id] === 'CANCELLED' ? 'bg-yellow-200' : ''}`}
-                                        title="Class Cancelled"
-                                    >
-                                        <CircleMinus color="orange" size={30} />
-                                    </button>
-                                    <button
-                                        onClick={() => markAttendance(schedule.subject.id, 'PRESENT')}
-                                        className={`p-1 rounded ${attendance[schedule.subject.id] === 'PRESENT' ? 'bg-green-200' : ''}`}
-                                        title="Present"
-                                    >
-                                        <CircleCheck color="green" size={30} />
-                                    </button>
-                                    <button
-                                        onClick={() => markAttendance(schedule.subject.id, 'ABSENT')}
-                                        className={`p-1 rounded ${attendance[schedule.subject.id] === 'ABSENT' ? 'bg-red-200' : ''}`}
-                                        title="Absent"
-                                    >
-                                        <CircleX color="red" size={30} />
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                )}
             </div>
         </>
     );
