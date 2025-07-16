@@ -55,7 +55,7 @@ const AdminLoginPage = () => {
                         Admin Login
                     </h2>
                     <p className="mt-2 text-center text-sm text-gray-600">
-                        Access the SevenFive Admin Panel
+                        Access the Admin Panel
                     </p>
                 </div>
 
