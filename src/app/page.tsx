@@ -14,6 +14,9 @@ export default function Home() {
             <a href="/admin" className="block text-[44px] text-green-600 hover:text-green-800">
               Admin Panel
             </a>
+            <a href="/admin/timetable" className="block text-[44px] text-purple-600 hover:text-purple-800">
+              View Timetable
+            </a>
           </div>
         </div>
       </div>

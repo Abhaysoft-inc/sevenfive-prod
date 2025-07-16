@@ -26,13 +26,23 @@ const AdminPanel = () => {
     const [subjectYear, setSubjectYear] = useState('FIRST');
     const [subjects, setSubjects] = useState([]);
 
+    // Schedule state
+    const [scheduleBatch, setScheduleBatch] = useState('');
+    const [scheduleSubject, setScheduleSubject] = useState('');
+    const [scheduleDayOfWeek, setScheduleDayOfWeek] = useState('MONDAY');
+    const [scheduleStartTime, setScheduleStartTime] = useState('');
+    const [scheduleEndTime, setScheduleEndTime] = useState('');
+    const [schedules, setSchedules] = useState([]);
+
     const years = ['FIRST', 'SECOND', 'THIRD', 'FOURTH'];
+    const daysOfWeek = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
 
     // Fetch data on component mount
     useEffect(() => {
         fetchBranches();
         fetchBatches();
         fetchSubjects();
+        fetchSchedules();
     }, []);
 
     const fetchBranches = async () => {
@@ -68,6 +78,18 @@ const AdminPanel = () => {
             }
         } catch (error) {
             console.error('Error fetching subjects:', error);
+        }
+    };
+
+    const fetchSchedules = async () => {
+        try {
+            const response = await fetch('/api/admin/schedules');
+            if (response.ok) {
+                const data = await response.json();
+                setSchedules(data);
+            }
+        } catch (error) {
+            console.error('Error fetching schedules:', error);
         }
     };
 
@@ -166,6 +188,68 @@ const AdminPanel = () => {
         }
     };
 
+    const handleCreateSchedule = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/admin/schedules', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    batchId: scheduleBatch,
+                    subjectId: scheduleSubject,
+                    dayOfWeek: scheduleDayOfWeek,
+                    startTime: scheduleStartTime,
+                    endTime: scheduleEndTime
+                })
+            });
+
+            if (response.ok) {
+                setSuccess('Schedule created successfully!');
+                setScheduleBatch('');
+                setScheduleSubject('');
+                setScheduleDayOfWeek('MONDAY');
+                setScheduleStartTime('');
+                setScheduleEndTime('');
+                fetchSchedules();
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Failed to create schedule');
+            }
+        } catch (err) {
+            setError('Something went wrong');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleDeleteSchedule = async (scheduleId) => {
+        if (!confirm('Are you sure you want to delete this schedule?')) return;
+
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch(`/api/admin/schedules?id=${scheduleId}`, {
+                method: 'DELETE'
+            });
+
+            if (response.ok) {
+                setSuccess('Schedule deleted successfully!');
+                fetchSchedules();
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Failed to delete schedule');
+            }
+        } catch (err) {
+            setError('Something went wrong');
+        } finally {
+            setLoading(false);
+        }
+    };
+
     return (
         <div className="min-h-screen bg-gray-100 py-8 px-4">
             <div className="max-w-6xl mx-auto">
@@ -174,13 +258,13 @@ const AdminPanel = () => {
                 {/* Tab Navigation */}
                 <div className="flex justify-center mb-8">
                     <div className="bg-white rounded-lg shadow-md p-1">
-                        {['branches', 'batches', 'subjects'].map((tab) => (
+                        {['branches', 'batches', 'subjects', 'schedules'].map((tab) => (
                             <button
                                 key={tab}
                                 onClick={() => setActiveTab(tab)}
                                 className={`px-6 py-2 rounded-md font-medium capitalize transition ${activeTab === tab
-                                        ? 'bg-blue-600 text-white'
-                                        : 'text-gray-600 hover:text-blue-600'
+                                    ? 'bg-blue-600 text-white'
+                                    : 'text-gray-600 hover:text-blue-600'
                                     }`}
                             >
                                 {tab}
@@ -323,14 +407,19 @@ const AdminPanel = () => {
                                 </div>
                                 <div>
                                     <label className="block font-medium mb-1">Branch</label>
-                                    <input
-                                        type="text"
+                                    <select
                                         value={subjectBranch}
                                         onChange={(e) => setSubjectBranch(e.target.value)}
-                                        placeholder="e.g., Computer Science"
                                         className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                         required
-                                    />
+                                    >
+                                        <option value="">Select Branch</option>
+                                        {branches.map((branch) => (
+                                            <option key={branch.id} value={branch.name}>
+                                                {branch.name} ({branch.code})
+                                            </option>
+                                        ))}
+                                    </select>
                                 </div>
                                 <div>
                                     <label className="block font-medium mb-1">Year</label>
@@ -353,6 +442,88 @@ const AdminPanel = () => {
                                     className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
                                 >
                                     {loading ? 'Creating...' : 'Create Subject'}
+                                </button>
+                            </form>
+                        )}
+
+                        {/* Schedule Form */}
+                        {activeTab === 'schedules' && (
+                            <form onSubmit={handleCreateSchedule} className="space-y-4">
+                                <div>
+                                    <label className="block font-medium mb-1">Batch</label>
+                                    <select
+                                        value={scheduleBatch}
+                                        onChange={(e) => setScheduleBatch(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    >
+                                        <option value="">Select Batch</option>
+                                        {batches.map((batch) => (
+                                            <option key={batch.id} value={batch.id}>
+                                                {batch.name} - {batch.branch?.name} ({batch.year} Year)
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Subject</label>
+                                    <select
+                                        value={scheduleSubject}
+                                        onChange={(e) => setScheduleSubject(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    >
+                                        <option value="">Select Subject</option>
+                                        {subjects.map((subject) => (
+                                            <option key={subject.id} value={subject.id}>
+                                                {subject.name} ({subject.code})
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Day of Week</label>
+                                    <select
+                                        value={scheduleDayOfWeek}
+                                        onChange={(e) => setScheduleDayOfWeek(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    >
+                                        {daysOfWeek.map((day) => (
+                                            <option key={day} value={day}>
+                                                {day.charAt(0) + day.slice(1).toLowerCase()}
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <label className="block font-medium mb-1">Start Time</label>
+                                        <input
+                                            type="time"
+                                            value={scheduleStartTime}
+                                            onChange={(e) => setScheduleStartTime(e.target.value)}
+                                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            required
+                                        />
+                                    </div>
+                                    <div>
+                                        <label className="block font-medium mb-1">End Time</label>
+                                        <input
+                                            type="time"
+                                            value={scheduleEndTime}
+                                            onChange={(e) => setScheduleEndTime(e.target.value)}
+                                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+                                >
+                                    {loading ? 'Creating...' : 'Create Schedule'}
                                 </button>
                             </form>
                         )}
@@ -390,6 +561,28 @@ const AdminPanel = () => {
                                         <p className="text-sm text-gray-600">
                                             Code: {subject.code} | {subject.branch} - {subject.year} Year
                                         </p>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {activeTab === 'schedules' && schedules.map((schedule) => (
+                                <div key={schedule.id} className="p-3 bg-gray-50 rounded-lg">
+                                    <div className="flex justify-between items-start">
+                                        <div className="flex-1">
+                                            <p className="font-medium">{schedule.subject.name}</p>
+                                            <p className="text-sm text-gray-600">
+                                                {schedule.batch.name} - {schedule.batch.branch?.name} ({schedule.batch.year} Year)
+                                            </p>
+                                            <p className="text-sm text-blue-600 font-medium">
+                                                {schedule.dayOfWeek.charAt(0) + schedule.dayOfWeek.slice(1).toLowerCase()} • {schedule.startTime} - {schedule.endTime}
+                                            </p>
+                                        </div>
+                                        <button
+                                            onClick={() => handleDeleteSchedule(schedule.id)}
+                                            className="text-red-500 hover:text-red-700 text-sm font-medium"
+                                        >
+                                            Delete
+                                        </button>
                                     </div>
                                 </div>
                             ))}
