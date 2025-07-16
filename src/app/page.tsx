@@ -4,7 +4,10 @@ export default function Home() {
   return (
     <>
 
-      Hello Abhay
+      <div className="h-screen w-full bg-[#FDFBF6]">
+        <a href="/signup" className="text-[44px]">Signup</a>
+
+      </div>
 
     </>
   );
