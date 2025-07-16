@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { CircleCheck, CircleMinus, CircleX, LogOut, Home, Calendar, BarChart3 } from 'lucide-react';
+import AttendanceHeatmap from '../../components/AttendanceHeatmap';
 
 const Dashboard = () => {
     const [activeTab, setActiveTab] = useState('home');
@@ -10,6 +11,7 @@ const Dashboard = () => {
     const [schedules, setSchedules] = useState([]);
     const [attendance, setAttendance] = useState({});
     const [attendanceStats, setAttendanceStats] = useState([]);
+    const [heatMapData, setHeatMapData] = useState([]);
     const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
     const [selectedDateSchedules, setSelectedDateSchedules] = useState([]);
     const [selectedDateAttendance, setSelectedDateAttendance] = useState({});
@@ -21,6 +23,7 @@ const Dashboard = () => {
         checkAuth();
         fetchUserSchedules();
         fetchAttendanceStats();
+        fetchHeatMapData();
     }, []);
 
     useEffect(() => {
@@ -108,6 +111,26 @@ const Dashboard = () => {
         }
     };
 
+    const fetchHeatMapData = async () => {
+        try {
+            const token = localStorage.getItem('token');
+            if (!token) return;
+
+            const response = await fetch('/api/user/attendance-heatmap', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                setHeatMapData(data.records);
+            }
+        } catch (error) {
+            console.error('Error fetching heat map data:', error);
+        }
+    };
+
     const fetchAttendance = async (subjectId, date) => {
         try {
             const token = localStorage.getItem('token');
@@ -163,8 +186,9 @@ const Dashboard = () => {
                         [subjectId]: status
                     }));
                 }
-                // Refresh attendance stats after marking attendance
+                // Refresh attendance stats and heat map data after marking attendance
                 fetchAttendanceStats();
+                fetchHeatMapData();
             } else {
                 const data = await response.json();
                 setError(data.error || 'Failed to mark attendance');
@@ -325,8 +349,8 @@ const Dashboard = () => {
                                     <button
                                         onClick={() => markAttendance(schedule.subject.id, 'CANCELLED')}
                                         className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'CANCELLED'
-                                                ? 'bg-amber-200 shadow-md border-2 border-amber-400'
-                                                : 'bg-amber-50 hover:bg-amber-100 border border-amber-200'
+                                            ? 'bg-amber-200 shadow-md border-2 border-amber-400'
+                                            : 'bg-amber-50 hover:bg-amber-100 border border-amber-200'
                                             }`}
                                         title="Class Cancelled"
                                     >
@@ -335,8 +359,8 @@ const Dashboard = () => {
                                     <button
                                         onClick={() => markAttendance(schedule.subject.id, 'PRESENT')}
                                         className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'PRESENT'
-                                                ? 'bg-emerald-200 shadow-md border-2 border-emerald-400'
-                                                : 'bg-emerald-50 hover:bg-emerald-100 border border-emerald-200'
+                                            ? 'bg-emerald-200 shadow-md border-2 border-emerald-400'
+                                            : 'bg-emerald-50 hover:bg-emerald-100 border border-emerald-200'
                                             }`}
                                         title="Present"
                                     >
@@ -345,8 +369,8 @@ const Dashboard = () => {
                                     <button
                                         onClick={() => markAttendance(schedule.subject.id, 'ABSENT')}
                                         className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'ABSENT'
-                                                ? 'bg-rose-200 shadow-md border-2 border-rose-400'
-                                                : 'bg-rose-50 hover:bg-rose-100 border border-rose-200'
+                                            ? 'bg-rose-200 shadow-md border-2 border-rose-400'
+                                            : 'bg-rose-50 hover:bg-rose-100 border border-rose-200'
                                             }`}
                                         title="Absent"
                                     >
@@ -516,38 +540,49 @@ const Dashboard = () => {
     };
 
     const renderStatsTab = () => (
-        <div className="mt-6">
-            <p className="text-xl font-semibold mb-4">Attendance Statistics</p>
+        <div className="mt-6 space-y-6">
+            {/* Heat Map Section */}
+            <div>
+                <AttendanceHeatmap
+                    attendanceData={heatMapData}
+                    className="mb-6"
+                />
+            </div>
 
-            <div className="bg-white rounded-lg shadow-md p-4">
-                {attendanceStats.map((stat, index) => {
-                    const getStatusColor = (percentage) => {
-                        if (percentage >= 85) return 'bg-green-300';
-                        if (percentage >= 75) return 'bg-yellow-300';
-                        return 'bg-red-300';
-                    };
+            {/* Statistics Section */}
+            <div>
+                <p className="text-xl font-semibold mb-4">Subject-wise Attendance Statistics</p>
 
-                    return (
-                        <div className="flex justify-between items-center p-3 border-b last:border-b-0" key={index}>
-                            <div>
-                                <p className="font-semibold">{stat.subject.name}</p>
-                                <p className="text-sm text-gray-600">Code: {stat.subject.code}</p>
-                                <p className="text-xs text-gray-500">
-                                    {stat.presentClasses}/{stat.totalClasses - stat.cancelledClasses} classes attended
+                <div className="bg-white rounded-lg shadow-md p-4">
+                    {attendanceStats.map((stat, index) => {
+                        const getStatusColor = (percentage) => {
+                            if (percentage >= 85) return 'bg-green-300';
+                            if (percentage >= 75) return 'bg-yellow-300';
+                            return 'bg-red-300';
+                        };
+
+                        return (
+                            <div className="flex justify-between items-center p-3 border-b last:border-b-0" key={index}>
+                                <div>
+                                    <p className="font-semibold">{stat.subject.name}</p>
+                                    <p className="text-sm text-gray-600">Code: {stat.subject.code}</p>
+                                    <p className="text-xs text-gray-500">
+                                        {stat.presentClasses}/{stat.totalClasses - stat.cancelledClasses} classes attended
+                                    </p>
+                                </div>
+                                <p className={`px-3 py-2 rounded-full font-semibold ${getStatusColor(stat.attendancePercentage)}`}>
+                                    {stat.attendancePercentage}%
                                 </p>
                             </div>
-                            <p className={`px-3 py-2 rounded-full font-semibold ${getStatusColor(stat.attendancePercentage)}`}>
-                                {stat.attendancePercentage}%
-                            </p>
-                        </div>
-                    );
-                })}
+                        );
+                    })}
 
-                {attendanceStats.length === 0 && (
-                    <div className="text-center py-8 text-gray-500">
-                        No attendance data available
-                    </div>
-                )}
+                    {attendanceStats.length === 0 && (
+                        <div className="text-center py-8 text-gray-500">
+                            No attendance data available
+                        </div>
+                    )}
+                </div>
             </div>
         </div>
     );
