@@ -20,6 +20,7 @@ model User {
   branch            String
   batch             String
   year              Year               @default(FIRST)
+  role              Role               @default(STUDENT)
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
   attendanceRecords AttendanceRecord[]
@@ -35,11 +36,14 @@ enum Year {
 model Subject {
   id                String             @id @default(uuid())
   name              String
+  code              String
   branch            String
-  batch             String
+  year              Year
   attendanceRecords AttendanceRecord[]
   createdAt         DateTime           @default(now())
   updatedAt         DateTime           @updatedAt
+
+  @@unique([code, branch, year])
 }
 
 model AttendanceRecord {
@@ -60,4 +64,30 @@ enum AttendanceStatus {
   PRESENT
   ABSENT
   CANCELLED
+}
+
+model Branch {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  code      String   @unique
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  batches   Batch[]
+}
+
+model Batch {
+  id        String   @id @default(uuid())
+  name      String
+  branchId  String
+  year      Year
+  branch    Branch   @relation(fields: [branchId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([name, branchId, year])
+}
+
+enum Role {
+  ADMIN
+  STUDENT
 }

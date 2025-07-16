@@ -1,0 +1,404 @@
+'use client';
+
+import React, { useState, useEffect } from 'react';
+
+const AdminPanel = () => {
+    const [activeTab, setActiveTab] = useState('branches');
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
+
+    // Branch state
+    const [branchName, setBranchName] = useState('');
+    const [branchCode, setBranchCode] = useState('');
+    const [branches, setBranches] = useState([]);
+
+    // Batch state
+    const [batchName, setBatchName] = useState('');
+    const [selectedBranch, setSelectedBranch] = useState('');
+    const [selectedYear, setSelectedYear] = useState('FIRST');
+    const [batches, setBatches] = useState([]);
+
+    // Subject state
+    const [subjectName, setSubjectName] = useState('');
+    const [subjectCode, setSubjectCode] = useState('');
+    const [subjectBranch, setSubjectBranch] = useState('');
+    const [subjectYear, setSubjectYear] = useState('FIRST');
+    const [subjects, setSubjects] = useState([]);
+
+    const years = ['FIRST', 'SECOND', 'THIRD', 'FOURTH'];
+
+    // Fetch data on component mount
+    useEffect(() => {
+        fetchBranches();
+        fetchBatches();
+        fetchSubjects();
+    }, []);
+
+    const fetchBranches = async () => {
+        try {
+            const response = await fetch('/api/admin/branches');
+            if (response.ok) {
+                const data = await response.json();
+                setBranches(data);
+            }
+        } catch (error) {
+            console.error('Error fetching branches:', error);
+        }
+    };
+
+    const fetchBatches = async () => {
+        try {
+            const response = await fetch('/api/admin/batches');
+            if (response.ok) {
+                const data = await response.json();
+                setBatches(data);
+            }
+        } catch (error) {
+            console.error('Error fetching batches:', error);
+        }
+    };
+
+    const fetchSubjects = async () => {
+        try {
+            const response = await fetch('/api/admin/subjects');
+            if (response.ok) {
+                const data = await response.json();
+                setSubjects(data);
+            }
+        } catch (error) {
+            console.error('Error fetching subjects:', error);
+        }
+    };
+
+    const handleCreateBranch = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/admin/branches', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name: branchName, code: branchCode })
+            });
+
+            if (response.ok) {
+                setSuccess('Branch created successfully!');
+                setBranchName('');
+                setBranchCode('');
+                fetchBranches();
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Failed to create branch');
+            }
+        } catch (err) {
+            setError('Something went wrong');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleCreateBatch = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/admin/batches', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: batchName,
+                    branchId: selectedBranch,
+                    year: selectedYear
+                })
+            });
+
+            if (response.ok) {
+                setSuccess('Batch created successfully!');
+                setBatchName('');
+                setSelectedBranch('');
+                fetchBatches();
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Failed to create batch');
+            }
+        } catch (err) {
+            setError('Something went wrong');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    const handleCreateSubject = async (e) => {
+        e.preventDefault();
+        setLoading(true);
+        setError('');
+
+        try {
+            const response = await fetch('/api/admin/subjects', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name: subjectName,
+                    code: subjectCode,
+                    branch: subjectBranch,
+                    year: subjectYear
+                })
+            });
+
+            if (response.ok) {
+                setSuccess('Subject created successfully!');
+                setSubjectName('');
+                setSubjectCode('');
+                setSubjectBranch('');
+                setSubjectYear('FIRST');
+                fetchSubjects();
+            } else {
+                const data = await response.json();
+                setError(data.error || 'Failed to create subject');
+            }
+        } catch (err) {
+            setError('Something went wrong');
+        } finally {
+            setLoading(false);
+        }
+    };
+
+    return (
+        <div className="min-h-screen bg-gray-100 py-8 px-4">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-3xl font-bold text-center mb-8">Admin Panel</h1>
+
+                {/* Tab Navigation */}
+                <div className="flex justify-center mb-8">
+                    <div className="bg-white rounded-lg shadow-md p-1">
+                        {['branches', 'batches', 'subjects'].map((tab) => (
+                            <button
+                                key={tab}
+                                onClick={() => setActiveTab(tab)}
+                                className={`px-6 py-2 rounded-md font-medium capitalize transition ${activeTab === tab
+                                        ? 'bg-blue-600 text-white'
+                                        : 'text-gray-600 hover:text-blue-600'
+                                    }`}
+                            >
+                                {tab}
+                            </button>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Error/Success Messages */}
+                {error && (
+                    <div className="bg-red-50 border border-red-200 text-red-600 rounded-lg p-3 mb-4">
+                        {error}
+                    </div>
+                )}
+                {success && (
+                    <div className="bg-green-50 border border-green-200 text-green-600 rounded-lg p-3 mb-4">
+                        {success}
+                    </div>
+                )}
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    {/* Forms Section */}
+                    <div className="bg-white rounded-xl shadow-md p-6">
+                        <h2 className="text-xl font-semibold mb-6 capitalize">Create {activeTab.slice(0, -1)}</h2>
+
+                        {/* Branch Form */}
+                        {activeTab === 'branches' && (
+                            <form onSubmit={handleCreateBranch} className="space-y-4">
+                                <div>
+                                    <label className="block font-medium mb-1">Branch Name</label>
+                                    <input
+                                        type="text"
+                                        value={branchName}
+                                        onChange={(e) => setBranchName(e.target.value)}
+                                        placeholder="e.g., Computer Science"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Branch Code</label>
+                                    <input
+                                        type="text"
+                                        value={branchCode}
+                                        onChange={(e) => setBranchCode(e.target.value)}
+                                        placeholder="e.g., CS"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    />
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+                                >
+                                    {loading ? 'Creating...' : 'Create Branch'}
+                                </button>
+                            </form>
+                        )}
+
+                        {/* Batch Form */}
+                        {activeTab === 'batches' && (
+                            <form onSubmit={handleCreateBatch} className="space-y-4">
+                                <div>
+                                    <label className="block font-medium mb-1">Batch Name</label>
+                                    <input
+                                        type="text"
+                                        value={batchName}
+                                        onChange={(e) => setBatchName(e.target.value)}
+                                        placeholder="e.g., CS1"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Branch</label>
+                                    <select
+                                        value={selectedBranch}
+                                        onChange={(e) => setSelectedBranch(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    >
+                                        <option value="">Select Branch</option>
+                                        {branches.map((branch) => (
+                                            <option key={branch.id} value={branch.id}>
+                                                {branch.name} ({branch.code})
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Year</label>
+                                    <select
+                                        value={selectedYear}
+                                        onChange={(e) => setSelectedYear(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    >
+                                        {years.map((year) => (
+                                            <option key={year} value={year}>
+                                                {year} Year
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+                                >
+                                    {loading ? 'Creating...' : 'Create Batch'}
+                                </button>
+                            </form>
+                        )}
+
+                        {/* Subject Form */}
+                        {activeTab === 'subjects' && (
+                            <form onSubmit={handleCreateSubject} className="space-y-4">
+                                <div>
+                                    <label className="block font-medium mb-1">Subject Name</label>
+                                    <input
+                                        type="text"
+                                        value={subjectName}
+                                        onChange={(e) => setSubjectName(e.target.value)}
+                                        placeholder="e.g., Data Structures"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Subject Code</label>
+                                    <input
+                                        type="text"
+                                        value={subjectCode}
+                                        onChange={(e) => setSubjectCode(e.target.value)}
+                                        placeholder="e.g., DS101"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Branch</label>
+                                    <input
+                                        type="text"
+                                        value={subjectBranch}
+                                        onChange={(e) => setSubjectBranch(e.target.value)}
+                                        placeholder="e.g., Computer Science"
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label className="block font-medium mb-1">Year</label>
+                                    <select
+                                        value={subjectYear}
+                                        onChange={(e) => setSubjectYear(e.target.value)}
+                                        className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                        required
+                                    >
+                                        {years.map((year) => (
+                                            <option key={year} value={year}>
+                                                {year} Year
+                                            </option>
+                                        ))}
+                                    </select>
+                                </div>
+                                <button
+                                    type="submit"
+                                    disabled={loading}
+                                    className="w-full bg-blue-600 text-white font-semibold py-2 rounded-lg hover:bg-blue-700 transition disabled:opacity-50"
+                                >
+                                    {loading ? 'Creating...' : 'Create Subject'}
+                                </button>
+                            </form>
+                        )}
+                    </div>
+
+                    {/* Lists Section */}
+                    <div className="bg-white rounded-xl shadow-md p-6">
+                        <h2 className="text-xl font-semibold mb-6 capitalize">Existing {activeTab}</h2>
+
+                        <div className="space-y-3 max-h-96 overflow-y-auto">
+                            {activeTab === 'branches' && branches.map((branch) => (
+                                <div key={branch.id} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <p className="font-medium">{branch.name}</p>
+                                        <p className="text-sm text-gray-600">Code: {branch.code}</p>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {activeTab === 'batches' && batches.map((batch) => (
+                                <div key={batch.id} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <p className="font-medium">{batch.name}</p>
+                                        <p className="text-sm text-gray-600">
+                                            {batch.branch?.name} - {batch.year} Year
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+
+                            {activeTab === 'subjects' && subjects.map((subject) => (
+                                <div key={subject.id} className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
+                                    <div>
+                                        <p className="font-medium">{subject.name}</p>
+                                        <p className="text-sm text-gray-600">
+                                            Code: {subject.code} | {subject.branch} - {subject.year} Year
+                                        </p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default AdminPanel;
