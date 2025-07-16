@@ -49,7 +49,7 @@ export async function POST(request: NextRequest) {
     } catch (error) {
         console.error("Error creating batch:", error);
 
-        if (error.code === 'P2002') {
+        if (error && typeof error === 'object' && 'code' in error && error.code === 'P2002') {
             return NextResponse.json(
                 { error: "Batch with this name already exists for this branch and year" },
                 { status: 400 }

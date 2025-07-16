@@ -42,7 +42,7 @@ export async function POST(request: NextRequest) {
     } catch (error) {
         console.error("Error creating branch:", error);
 
-        if (error.code === 'P2002') {
+        if (error && typeof error === 'object' && 'code' in error && error.code === 'P2002') {
             return NextResponse.json(
                 { error: "Branch name or code already exists" },
                 { status: 400 }

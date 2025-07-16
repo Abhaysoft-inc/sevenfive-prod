@@ -121,13 +121,7 @@ const AdminLoginPage = () => {
                     </div>
                 </form>
 
-                <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-                    <p className="text-sm text-yellow-800">
-                        <strong>Demo Admin Credentials:</strong><br />
-                        Email: admin@sevenfive.com<br />
-                        Password: GoToHell555123
-                    </p>
-                </div>
+
             </div>
         </div>
     );
