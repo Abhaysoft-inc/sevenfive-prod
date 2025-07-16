@@ -8,13 +8,16 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center h-full space-y-4">
           <h1 className="text-4xl font-bold mb-8">Welcome to SevenFive</h1>
           <div className="space-y-4">
-            <a href="/signup" className="block text-[44px] text-blue-600 hover:text-blue-800">
+            <a href="/login" className="block text-[44px] text-blue-600 hover:text-blue-800">
+              Login
+            </a>
+            <a href="/signup" className="block text-[44px] text-green-600 hover:text-green-800">
               Signup
             </a>
-            <a href="/admin" className="block text-[44px] text-green-600 hover:text-green-800">
+            <a href="/admin" className="block text-[44px] text-purple-600 hover:text-purple-800">
               Admin Panel
             </a>
-            <a href="/admin/timetable" className="block text-[44px] text-purple-600 hover:text-purple-800">
+            <a href="/admin/timetable" className="block text-[44px] text-orange-600 hover:text-orange-800">
               View Timetable
             </a>
           </div>
