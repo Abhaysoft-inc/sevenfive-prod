@@ -19,9 +19,29 @@ export function middleware(request: NextRequest) {
         }
     }
 
+    // Check if the user is accessing admin routes (except login)
+    if (request.nextUrl.pathname.startsWith('/admin') && !request.nextUrl.pathname.startsWith('/admin/login')) {
+        const adminToken = request.cookies.get('token')?.value;
+
+        if (!adminToken) {
+            return NextResponse.redirect(new URL('/admin/login', request.url));
+        }
+
+        try {
+            const decoded = jwt.verify(adminToken, process.env.JWT_SECRET || 'your-secret-key') as any;
+            // Check if user has admin role
+            if (decoded.role !== 'ADMIN') {
+                return NextResponse.redirect(new URL('/admin/login', request.url));
+            }
+            return NextResponse.next();
+        } catch (error) {
+            return NextResponse.redirect(new URL('/admin/login', request.url));
+        }
+    }
+
     return NextResponse.next();
 }
 
 export const config = {
-    matcher: ['/dashboard/:path*']
+    matcher: ['/dashboard/:path*', '/admin/:path*']
 };

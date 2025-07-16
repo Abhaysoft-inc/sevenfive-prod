@@ -1,12 +1,17 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
+import { LogOut } from 'lucide-react';
 
 const AdminPanel = () => {
+    const [admin, setAdmin] = useState(null);
+    const [authLoading, setAuthLoading] = useState(true);
     const [activeTab, setActiveTab] = useState('branches');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [success, setSuccess] = useState('');
+    const router = useRouter();
 
     // Branch state
     const [branchName, setBranchName] = useState('');
@@ -39,11 +44,64 @@ const AdminPanel = () => {
 
     // Fetch data on component mount
     useEffect(() => {
-        fetchBranches();
-        fetchBatches();
-        fetchSubjects();
-        fetchSchedules();
+        checkAdminAuth();
     }, []);
+
+    useEffect(() => {
+        if (admin) {
+            fetchBranches();
+            fetchBatches();
+            fetchSubjects();
+            fetchSchedules();
+        }
+    }, [admin]);
+
+    const checkAdminAuth = async () => {
+        try {
+            const token = localStorage.getItem('adminToken');
+            if (!token) {
+                router.push('/admin/login');
+                return;
+            }
+
+            const response = await fetch('/api/auth/verify', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                if (data.user.role === 'ADMIN') {
+                    setAdmin(data.user);
+                } else {
+                    localStorage.removeItem('adminToken');
+                    localStorage.removeItem('admin');
+                    router.push('/admin/login');
+                }
+            } else {
+                localStorage.removeItem('adminToken');
+                localStorage.removeItem('admin');
+                router.push('/admin/login');
+            }
+        } catch (error) {
+            console.error('Admin auth check failed:', error);
+            router.push('/admin/login');
+        } finally {
+            setAuthLoading(false);
+        }
+    };
+
+    const handleAdminLogout = async () => {
+        try {
+            await fetch('/api/auth/logout', { method: 'POST' });
+            localStorage.removeItem('adminToken');
+            localStorage.removeItem('admin');
+            router.push('/admin/login');
+        } catch (error) {
+            console.error('Logout error:', error);
+        }
+    };
 
     const fetchBranches = async () => {
         try {
@@ -250,10 +308,34 @@ const AdminPanel = () => {
         }
     };
 
+    if (authLoading) {
+        return (
+            <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+                <div className="text-xl">Verifying admin access...</div>
+            </div>
+        );
+    }
+
+    if (!admin) {
+        return null; // Will redirect to admin login
+    }
+
     return (
         <div className="min-h-screen bg-gray-100 py-8 px-4">
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-3xl font-bold text-center mb-8">Admin Panel</h1>
+                <div className="flex justify-between items-center mb-8">
+                    <h1 className="text-3xl font-bold text-center">Admin Panel</h1>
+                    <div className="flex items-center gap-4">
+                        <p className="text-lg">Welcome, {admin.name}</p>
+                        <button
+                            onClick={handleAdminLogout}
+                            className="flex items-center gap-2 bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition"
+                        >
+                            <LogOut size={20} />
+                            Logout
+                        </button>
+                    </div>
+                </div>
 
                 {/* Tab Navigation */}
                 <div className="flex justify-center mb-8">

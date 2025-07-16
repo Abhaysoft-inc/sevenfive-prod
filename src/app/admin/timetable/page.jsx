@@ -1,13 +1,17 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 const TimetablePage = () => {
+    const [admin, setAdmin] = useState(null);
+    const [authLoading, setAuthLoading] = useState(true);
     const [schedules, setSchedules] = useState([]);
     const [batches, setBatches] = useState([]);
     const [selectedBatch, setSelectedBatch] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const router = useRouter();
 
     const daysOfWeek = ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
     const timeSlots = [
@@ -15,9 +19,51 @@ const TimetablePage = () => {
     ];
 
     useEffect(() => {
-        fetchBatches();
-        fetchSchedules();
+        checkAdminAuth();
     }, []);
+
+    useEffect(() => {
+        if (admin) {
+            fetchBatches();
+            fetchSchedules();
+        }
+    }, [admin]);
+
+    const checkAdminAuth = async () => {
+        try {
+            const token = localStorage.getItem('adminToken');
+            if (!token) {
+                router.push('/admin/login');
+                return;
+            }
+
+            const response = await fetch('/api/auth/verify', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            });
+
+            if (response.ok) {
+                const data = await response.json();
+                if (data.user.role === 'ADMIN') {
+                    setAdmin(data.user);
+                } else {
+                    localStorage.removeItem('adminToken');
+                    localStorage.removeItem('admin');
+                    router.push('/admin/login');
+                }
+            } else {
+                localStorage.removeItem('adminToken');
+                localStorage.removeItem('admin');
+                router.push('/admin/login');
+            }
+        } catch (error) {
+            console.error('Admin auth check failed:', error);
+            router.push('/admin/login');
+        } finally {
+            setAuthLoading(false);
+        }
+    };
 
     const fetchBatches = async () => {
         try {
@@ -64,6 +110,18 @@ const TimetablePage = () => {
             return scheduleStart <= slotTime && scheduleEnd > slotTime;
         });
     };
+
+    if (authLoading) {
+        return (
+            <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+                <div className="text-xl">Verifying admin access...</div>
+            </div>
+        );
+    }
+
+    if (!admin) {
+        return null; // Will redirect to admin login
+    }
 
     if (loading) {
         return (
