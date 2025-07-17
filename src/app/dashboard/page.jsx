@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { CircleCheck, CircleMinus, CircleX, LogOut, Home, Calendar, BarChart3 } from 'lucide-react';
-import AttendanceHeatmap from '../../components/AttendanceHeatmap';
 
 const Dashboard = () => {
     const [activeTab, setActiveTab] = useState('home');
@@ -11,11 +10,11 @@ const Dashboard = () => {
     const [schedules, setSchedules] = useState([]);
     const [attendance, setAttendance] = useState({});
     const [attendanceStats, setAttendanceStats] = useState([]);
-    const [heatMapData, setHeatMapData] = useState([]);
     const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
     const [selectedDateSchedules, setSelectedDateSchedules] = useState([]);
     const [selectedDateAttendance, setSelectedDateAttendance] = useState({});
     const [loading, setLoading] = useState(true);
+    const [attendanceLoading, setAttendanceLoading] = useState({});
     const [error, setError] = useState('');
     const router = useRouter();
 
@@ -23,7 +22,6 @@ const Dashboard = () => {
         checkAuth();
         fetchUserSchedules();
         fetchAttendanceStats();
-        fetchHeatMapData();
     }, []);
 
     useEffect(() => {
@@ -111,26 +109,6 @@ const Dashboard = () => {
         }
     };
 
-    const fetchHeatMapData = async () => {
-        try {
-            const token = localStorage.getItem('token');
-            if (!token) return;
-
-            const response = await fetch('/api/user/attendance-heatmap', {
-                headers: {
-                    'Authorization': `Bearer ${token}`
-                }
-            });
-
-            if (response.ok) {
-                const data = await response.json();
-                setHeatMapData(data.records);
-            }
-        } catch (error) {
-            console.error('Error fetching heat map data:', error);
-        }
-    };
-
     const fetchAttendance = async (subjectId, date) => {
         try {
             const token = localStorage.getItem('token');
@@ -155,7 +133,15 @@ const Dashboard = () => {
     };
 
     const markAttendance = async (subjectId, status, date = null) => {
+        const loadingKey = `${subjectId}-${date || 'today'}`;
+        
         try {
+            // Set loading state for this specific button
+            setAttendanceLoading(prev => ({
+                ...prev,
+                [loadingKey]: true
+            }));
+
             const token = localStorage.getItem('token');
             const attendanceDate = date || new Date().toISOString().split('T')[0];
 
@@ -186,9 +172,8 @@ const Dashboard = () => {
                         [subjectId]: status
                     }));
                 }
-                // Refresh attendance stats and heat map data after marking attendance
+                // Refresh attendance stats after marking attendance
                 fetchAttendanceStats();
-                fetchHeatMapData();
             } else {
                 const data = await response.json();
                 setError(data.error || 'Failed to mark attendance');
@@ -196,6 +181,12 @@ const Dashboard = () => {
         } catch (error) {
             console.error('Error marking attendance:', error);
             setError('Failed to mark attendance');
+        } finally {
+            // Clear loading state
+            setAttendanceLoading(prev => ({
+                ...prev,
+                [loadingKey]: false
+            }));
         }
     };
 
@@ -348,33 +339,48 @@ const Dashboard = () => {
                                 <div className="icons flex gap-3 items-center">
                                     <button
                                         onClick={() => markAttendance(schedule.subject.id, 'CANCELLED')}
+                                        disabled={attendanceLoading[`${schedule.subject.id}-today`]}
                                         className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'CANCELLED'
                                             ? 'bg-amber-200 shadow-md border-2 border-amber-400'
                                             : 'bg-amber-50 hover:bg-amber-100 border border-amber-200'
-                                            }`}
+                                            } ${attendanceLoading[`${schedule.subject.id}-today`] ? 'opacity-50 cursor-not-allowed' : ''}`}
                                         title="Class Cancelled"
                                     >
-                                        <CircleMinus color="#f59e0b" size={24} />
+                                        {attendanceLoading[`${schedule.subject.id}-today`] ? (
+                                            <div className="w-6 h-6 border-2 border-amber-600 border-t-transparent rounded-full animate-spin"></div>
+                                        ) : (
+                                            <CircleMinus color="#f59e0b" size={24} />
+                                        )}
                                     </button>
                                     <button
                                         onClick={() => markAttendance(schedule.subject.id, 'PRESENT')}
+                                        disabled={attendanceLoading[`${schedule.subject.id}-today`]}
                                         className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'PRESENT'
                                             ? 'bg-emerald-200 shadow-md border-2 border-emerald-400'
                                             : 'bg-emerald-50 hover:bg-emerald-100 border border-emerald-200'
-                                            }`}
+                                            } ${attendanceLoading[`${schedule.subject.id}-today`] ? 'opacity-50 cursor-not-allowed' : ''}`}
                                         title="Present"
                                     >
-                                        <CircleCheck color="#10b981" size={24} />
+                                        {attendanceLoading[`${schedule.subject.id}-today`] ? (
+                                            <div className="w-6 h-6 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+                                        ) : (
+                                            <CircleCheck color="#10b981" size={24} />
+                                        )}
                                     </button>
                                     <button
                                         onClick={() => markAttendance(schedule.subject.id, 'ABSENT')}
+                                        disabled={attendanceLoading[`${schedule.subject.id}-today`]}
                                         className={`p-2 rounded-lg transition-all ${attendance[schedule.subject.id] === 'ABSENT'
                                             ? 'bg-rose-200 shadow-md border-2 border-rose-400'
                                             : 'bg-rose-50 hover:bg-rose-100 border border-rose-200'
-                                            }`}
+                                            } ${attendanceLoading[`${schedule.subject.id}-today`] ? 'opacity-50 cursor-not-allowed' : ''}`}
                                         title="Absent"
                                     >
-                                        <CircleX color="#f43f5e" size={24} />
+                                        {attendanceLoading[`${schedule.subject.id}-today`] ? (
+                                            <div className="w-6 h-6 border-2 border-rose-600 border-t-transparent rounded-full animate-spin"></div>
+                                        ) : (
+                                            <CircleX color="#f43f5e" size={24} />
+                                        )}
                                     </button>
                                 </div>
                             </div>
@@ -509,24 +515,39 @@ const Dashboard = () => {
                                         <div className="flex gap-2">
                                             <button
                                                 onClick={() => markAttendance(schedule.subject.id, 'CANCELLED', selectedDate)}
-                                                className={`p-2 rounded ${selectedDateAttendance[schedule.subject.id] === 'CANCELLED' ? 'bg-yellow-200' : 'hover:bg-yellow-100'}`}
+                                                disabled={attendanceLoading[`${schedule.subject.id}-${selectedDate}`]}
+                                                className={`p-2 rounded ${selectedDateAttendance[schedule.subject.id] === 'CANCELLED' ? 'bg-yellow-200' : 'hover:bg-yellow-100'} ${attendanceLoading[`${schedule.subject.id}-${selectedDate}`] ? 'opacity-50 cursor-not-allowed' : ''}`}
                                                 title="Class Cancelled"
                                             >
-                                                <CircleMinus color="orange" size={20} />
+                                                {attendanceLoading[`${schedule.subject.id}-${selectedDate}`] ? (
+                                                    <div className="w-5 h-5 border-2 border-orange-600 border-t-transparent rounded-full animate-spin"></div>
+                                                ) : (
+                                                    <CircleMinus color="orange" size={20} />
+                                                )}
                                             </button>
                                             <button
                                                 onClick={() => markAttendance(schedule.subject.id, 'PRESENT', selectedDate)}
-                                                className={`p-2 rounded ${selectedDateAttendance[schedule.subject.id] === 'PRESENT' ? 'bg-green-200' : 'hover:bg-green-100'}`}
+                                                disabled={attendanceLoading[`${schedule.subject.id}-${selectedDate}`]}
+                                                className={`p-2 rounded ${selectedDateAttendance[schedule.subject.id] === 'PRESENT' ? 'bg-green-200' : 'hover:bg-green-100'} ${attendanceLoading[`${schedule.subject.id}-${selectedDate}`] ? 'opacity-50 cursor-not-allowed' : ''}`}
                                                 title="Present"
                                             >
-                                                <CircleCheck color="green" size={20} />
+                                                {attendanceLoading[`${schedule.subject.id}-${selectedDate}`] ? (
+                                                    <div className="w-5 h-5 border-2 border-green-600 border-t-transparent rounded-full animate-spin"></div>
+                                                ) : (
+                                                    <CircleCheck color="green" size={20} />
+                                                )}
                                             </button>
                                             <button
                                                 onClick={() => markAttendance(schedule.subject.id, 'ABSENT', selectedDate)}
-                                                className={`p-2 rounded ${selectedDateAttendance[schedule.subject.id] === 'ABSENT' ? 'bg-red-200' : 'hover:bg-red-100'}`}
+                                                disabled={attendanceLoading[`${schedule.subject.id}-${selectedDate}`]}
+                                                className={`p-2 rounded ${selectedDateAttendance[schedule.subject.id] === 'ABSENT' ? 'bg-red-200' : 'hover:bg-red-100'} ${attendanceLoading[`${schedule.subject.id}-${selectedDate}`] ? 'opacity-50 cursor-not-allowed' : ''}`}
                                                 title="Absent"
                                             >
-                                                <CircleX color="red" size={20} />
+                                                {attendanceLoading[`${schedule.subject.id}-${selectedDate}`] ? (
+                                                    <div className="w-5 h-5 border-2 border-red-600 border-t-transparent rounded-full animate-spin"></div>
+                                                ) : (
+                                                    <CircleX color="red" size={20} />
+                                                )}
                                             </button>
                                         </div>
                                     </div>
@@ -541,14 +562,6 @@ const Dashboard = () => {
 
     const renderStatsTab = () => (
         <div className="mt-6 space-y-6">
-            {/* Heat Map Section */}
-            <div>
-                <AttendanceHeatmap
-                    attendanceData={heatMapData}
-                    className="mb-6"
-                />
-            </div>
-
             {/* Statistics Section */}
             <div>
                 <p className="text-xl font-semibold mb-4">Subject-wise Attendance Statistics</p>
