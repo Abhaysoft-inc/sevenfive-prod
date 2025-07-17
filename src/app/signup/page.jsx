@@ -63,7 +63,6 @@ const Signup = () => {
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [password, setPassword] = useState('');
-    const [college, setCollege] = useState('');
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -76,7 +75,6 @@ const Signup = () => {
                 email,
                 phone,
                 password,
-                college,
                 branch: selectedBranch,
                 batch: selectedBatch,
                 year: selectedYear
@@ -169,18 +167,6 @@ const Signup = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             type="password"
                             placeholder="********"
-                            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                            required
-                        />
-                    </div>
-
-                    <div>
-                        <label className="block font-medium mb-1">College</label>
-                        <input
-                            value={college}
-                            onChange={(e) => setCollege(e.target.value)}
-                            type="text"
-                            placeholder="Your college name"
                             className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                             required
                         />

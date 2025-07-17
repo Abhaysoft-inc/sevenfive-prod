@@ -5,12 +5,10 @@ const prisma = new PrismaClient();
 
 export async function GET() {
     try {
-        // Fetch all student users (exclude admins)
+        // Fetch all users (both students and admins)
         const users = await prisma.user.findMany({
-            where: {
-                role: 'STUDENT' // Only fetch students, not admins
-            },
             orderBy: {
+                role: 'asc', // Show admins first, then students
                 name: 'asc'
             }
         });
@@ -22,7 +20,19 @@ export async function GET() {
             users.map(async (user) => {
                 console.log(`Processing user: ${user.name}`);
 
-                // Get all subjects for the user's branch and year
+                // Skip attendance calculation for admin users
+                if (user.role === 'ADMIN') {
+                    return {
+                        userId: user.id,
+                        userName: user.name,
+                        totalClasses: 0,
+                        totalPresent: 0,
+                        overallPercentage: 0,
+                        subjectStats: []
+                    };
+                }
+
+                // Get all subjects for the user's branch and year (for students)
                 const subjects = await prisma.subject.findMany({
                     where: {
                         branch: user.branch,

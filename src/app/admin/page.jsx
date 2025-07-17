@@ -778,7 +778,7 @@ const AdminPanel = () => {
                                 users.length === 0 ? (
                                     <div className="text-center py-8">
                                         <h3 className="text-lg font-semibold text-gray-600 mb-2">No Users Found</h3>
-                                        <p className="text-gray-500">No students have registered yet.</p>
+                                        <p className="text-gray-500">No users have registered yet.</p>
                                     </div>
                                 ) : (
                                     users.map((user) => {
@@ -791,28 +791,53 @@ const AdminPanel = () => {
                                             return 'text-red-600 bg-red-100';
                                         };
 
+                                        const getRoleColor = (role) => {
+                                            return role === 'ADMIN' ? 'text-purple-600 bg-purple-100' : 'text-blue-600 bg-blue-100';
+                                        };
+
                                         return (
-                                            <div key={user.id} className="p-4 bg-gray-50 rounded-lg">
+                                            <div key={user.id} className={`p-4 rounded-lg ${user.role === 'ADMIN' ? 'bg-purple-50 border-2 border-purple-200' : 'bg-gray-50'}`}>
                                                 <div className="flex justify-between items-start">
                                                     <div className="flex-1">
                                                         <div className="flex items-center justify-between mb-2">
-                                                            <h3 className="font-semibold text-lg">{user.name}</h3>
-                                                            <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getAttendanceColor(overallAttendance)}`}>
-                                                                {overallAttendance}% Overall
-                                                            </span>
+                                                            <div className="flex items-center space-x-3">
+                                                                <h3 className="font-semibold text-lg">{user.name}</h3>
+                                                                <span className={`px-2 py-1 rounded-full text-xs font-semibold ${getRoleColor(user.role)}`}>
+                                                                    {user.role}
+                                                                </span>
+                                                            </div>
+                                                            {user.role === 'STUDENT' && (
+                                                                <span className={`px-3 py-1 rounded-full text-sm font-semibold ${getAttendanceColor(overallAttendance)}`}>
+                                                                    {overallAttendance}% Overall
+                                                                </span>
+                                                            )}
+                                                            {user.role === 'ADMIN' && (
+                                                                <span className="px-3 py-1 rounded-full text-sm font-semibold text-purple-600 bg-purple-100">
+                                                                    Administrator
+                                                                </span>
+                                                            )}
                                                         </div>
                                                         <div className="grid grid-cols-2 gap-4 text-sm text-gray-600">
                                                             <div>
                                                                 <p><span className="font-medium">Email:</span> {user.email}</p>
-                                                                <p><span className="font-medium">Branch:</span> {user.branch}</p>
+                                                                {user.role === 'STUDENT' && (
+                                                                    <p><span className="font-medium">Branch:</span> {user.branch}</p>
+                                                                )}
                                                             </div>
                                                             <div>
-                                                                <p><span className="font-medium">Batch:</span> {user.batch}</p>
-                                                                <p><span className="font-medium">Year:</span> {user.year}</p>
+                                                                {user.role === 'STUDENT' && (
+                                                                    <>
+                                                                        <p><span className="font-medium">Batch:</span> {user.batch}</p>
+                                                                        <p><span className="font-medium">Year:</span> {user.year}</p>
+                                                                    </>
+                                                                )}
+                                                                {user.role === 'ADMIN' && (
+                                                                    <p><span className="font-medium">Role:</span> System Administrator</p>
+                                                                )}
                                                             </div>
                                                         </div>
 
-                                                        {userStat && userStat.subjectStats && userStat.subjectStats.length > 0 && (
+                                                        {user.role === 'STUDENT' && userStat && userStat.subjectStats && userStat.subjectStats.length > 0 && (
                                                             <div className="mt-3 pt-3 border-t border-gray-200">
                                                                 <h4 className="font-medium text-sm text-gray-700 mb-2">Subject-wise Attendance:</h4>
                                                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
@@ -828,9 +853,15 @@ const AdminPanel = () => {
                                                             </div>
                                                         )}
 
-                                                        {userStat && userStat.totalClasses === 0 && (
+                                                        {user.role === 'STUDENT' && userStat && userStat.totalClasses === 0 && (
                                                             <div className="mt-3 pt-3 border-t border-gray-200">
                                                                 <p className="text-sm text-gray-500 italic">No attendance records yet</p>
+                                                            </div>
+                                                        )}
+
+                                                        {user.role === 'ADMIN' && (
+                                                            <div className="mt-3 pt-3 border-t border-purple-200">
+                                                                <p className="text-sm text-purple-600 italic">Admin users don't have attendance records</p>
                                                             </div>
                                                         )}
                                                     </div>
