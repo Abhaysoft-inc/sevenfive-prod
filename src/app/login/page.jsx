@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 const LoginPage = () => {
@@ -8,7 +8,36 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [authLoading, setAuthLoading] = useState(true);
     const router = useRouter();
+
+    // Check if user is already logged in
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                if (token) {
+                    const response = await fetch('/api/auth/verify', {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        // User is logged in, redirect to dashboard
+                        router.push('/dashboard');
+                        return;
+                    }
+                }
+            } catch (error) {
+                console.log('Auth check failed:', error);
+            } finally {
+                setAuthLoading(false);
+            }
+        };
+
+        checkAuth();
+    }, [router]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -44,6 +73,15 @@ const LoginPage = () => {
             setLoading(false);
         }
     };
+
+    // Show loading while checking authentication
+    if (authLoading) {
+        return (
+            <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+                <div className="text-xl">Loading...</div>
+            </div>
+        );
+    }
 
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">

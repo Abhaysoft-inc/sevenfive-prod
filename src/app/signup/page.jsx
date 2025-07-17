@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 const branches = {
     'Electrical Engineering': ['EE1', 'EE2'],
@@ -18,6 +19,35 @@ const Signup = () => {
     const router = useRouter();
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
+    const [authLoading, setAuthLoading] = useState(true);
+
+    // Check if user is already logged in
+    useEffect(() => {
+        const checkAuth = async () => {
+            try {
+                const token = localStorage.getItem('token');
+                if (token) {
+                    const response = await fetch('/api/auth/verify', {
+                        headers: {
+                            'Authorization': `Bearer ${token}`
+                        }
+                    });
+
+                    if (response.ok) {
+                        // User is logged in, redirect to dashboard
+                        router.push('/dashboard');
+                        return;
+                    }
+                }
+            } catch (error) {
+                console.log('Auth check failed:', error);
+            } finally {
+                setAuthLoading(false);
+            }
+        };
+
+        checkAuth();
+    }, [router]);
 
     const [selectedBranch, setSelectedBranch] = useState('');
     const [selectedBatch, setSelectedBatch] = useState('');
@@ -76,6 +106,15 @@ const Signup = () => {
         }
 
 
+    }
+
+    // Show loading while checking authentication
+    if (authLoading) {
+        return (
+            <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+                <div className="text-xl">Loading...</div>
+            </div>
+        );
     }
 
     return (
@@ -213,6 +252,19 @@ const Signup = () => {
                     >
                         {loading ? 'Creating Account...' : 'Create Account'}
                     </button>
+
+                    {/* Login Link */}
+                    <div className="text-center space-y-2 pt-4 border-t border-gray-200">
+                        <p className="text-sm text-gray-600">
+                            Already have an account?
+                        </p>
+                        <Link
+                            href="/login"
+                            className="inline-block text-blue-600 hover:text-blue-800 font-medium"
+                        >
+                            Sign in here
+                        </Link>
+                    </div>
                 </form>
             </div>
         </div>
