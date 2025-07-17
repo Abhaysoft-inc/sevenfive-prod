@@ -335,9 +335,9 @@ const Dashboard = () => {
                         <div key={schedule.id} className="w-full py-0.5 mt-1 rounded px-2">
                             <div className="bg-white shadow-lg border border-gray-200 flex justify-between px-6 py-4 rounded-lg">
                                 <div className="flex items-center space-x-4">
-                                    <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                                    {/* <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                                         <CircleMinus size={24} className="text-blue-600" />
-                                    </div>
+                                    </div> */}
                                     <div>
                                         <p className="text-[20px] rounded font-[500] text-gray-800">{schedule.subject.name}</p>
                                         <p className="text-sm text-gray-500">
