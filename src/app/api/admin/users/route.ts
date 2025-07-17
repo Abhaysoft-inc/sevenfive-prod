@@ -7,10 +7,10 @@ export async function GET() {
     try {
         // Fetch all users (both students and admins)
         const users = await prisma.user.findMany({
-            orderBy: {
-                role: 'asc', // Show admins first, then students
-                name: 'asc'
-            }
+            orderBy: [
+                { role: 'asc' }, // Show admins first, then students
+                { name: 'asc' }
+            ]
         });
 
         console.log(`Found ${users.length} users`);
