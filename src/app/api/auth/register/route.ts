@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
         const { name, email, phone, password, college, branch, batch, year } = body;
 
         // Validate required fields
-        if (!name || !email || !phone || !password || !college || !branch || !batch || !year) {
+        if (!name || !email || !phone || !password || !branch || !batch || !year) {
             return NextResponse.json(
                 { error: "Missing required fields" },
                 { status: 400 }
@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
                 email,
                 phone,
                 password: hashedPassword,
-                college,
+                college: college || null, // Optional field
                 branch,
                 batch,
                 year,
