@@ -10,10 +10,21 @@ const Dashboard = () => {
     const [schedules, setSchedules] = useState([]);
     const [attendance, setAttendance] = useState({});
     const [attendanceStats, setAttendanceStats] = useState([]);
-    const [selectedDate, setSelectedDate] = useState(new Date().toISOString().split('T')[0]);
+
+    // Use local date to avoid timezone issues
+    const getTodayDateString = () => {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    };
+
+    const [selectedDate, setSelectedDate] = useState(getTodayDateString());
     const [selectedDateSchedules, setSelectedDateSchedules] = useState([]);
-    const [selectedDateAttendance, setSelectedDateAttendance] = useState({});
+    const [selectedDateAttendance, setSelectedDateAttendance] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [dateScheduleLoading, setDateScheduleLoading] = useState(false);
     const [attendanceLoading, setAttendanceLoading] = useState({});
     const [error, setError] = useState('');
     const router = useRouter();
@@ -134,7 +145,7 @@ const Dashboard = () => {
 
     const markAttendance = async (subjectId, status, date = null) => {
         const loadingKey = `${subjectId}-${date || 'today'}`;
-        
+
         try {
             // Set loading state for this specific button
             setAttendanceLoading(prev => ({
@@ -200,6 +211,7 @@ const Dashboard = () => {
 
     const fetchAttendanceForDate = async (date) => {
         try {
+            setDateScheduleLoading(true);
             const token = localStorage.getItem('token');
             const dateSchedules = getSchedulesForDate(schedules, date);
             const dateAttendance = {};
@@ -223,6 +235,8 @@ const Dashboard = () => {
             setSelectedDateAttendance(dateAttendance);
         } catch (error) {
             console.error('Error fetching attendance for date:', error);
+        } finally {
+            setDateScheduleLoading(false);
         }
     };
 
@@ -463,8 +477,15 @@ const Dashboard = () => {
                         {/* Calendar Days */}
                         <div className="grid grid-cols-7 gap-1">
                             {calendarDays.map((date, index) => {
-                                const dateStr = date.toISOString().split('T')[0];
-                                const isToday = dateStr === new Date().toISOString().split('T')[0];
+                                // Format date to match our local date format
+                                const year = date.getFullYear();
+                                const month = String(date.getMonth() + 1).padStart(2, '0');
+                                const day = String(date.getDate()).padStart(2, '0');
+                                const dateStr = `${year}-${month}-${day}`;
+
+                                const today = new Date();
+                                const todayStr = getTodayDateString();
+                                const isToday = dateStr === todayStr;
                                 const isSelected = dateStr === selectedDate;
                                 const isCurrentMonth = date.getMonth() === today.getMonth();
 
@@ -472,15 +493,21 @@ const Dashboard = () => {
                                     <button
                                         key={index}
                                         onClick={() => handleDateChange(dateStr)}
+                                        disabled={dateScheduleLoading}
                                         className={`
                                             p-2 text-sm rounded transition-colors
                                             ${isSelected ? 'bg-blue-500 text-white' : ''}
                                             ${isToday && !isSelected ? 'bg-blue-100 text-blue-600' : ''}
                                             ${!isCurrentMonth ? 'text-gray-300' : 'text-gray-700'}
                                             ${isCurrentMonth && !isSelected && !isToday ? 'hover:bg-gray-100' : ''}
+                                            ${dateScheduleLoading ? 'opacity-50 cursor-not-allowed' : ''}
                                         `}
                                     >
-                                        {date.getDate()}
+                                        {dateScheduleLoading && isSelected ? (
+                                            <div className="animate-spin rounded-full h-3 w-3 border border-white border-t-transparent mx-auto"></div>
+                                        ) : (
+                                            date.getDate()
+                                        )}
                                     </button>
                                 );
                             })}
@@ -498,7 +525,14 @@ const Dashboard = () => {
                             })}
                         </h3>
 
-                        {selectedDateSchedules.length === 0 ? (
+                        {dateScheduleLoading ? (
+                            <div className="text-center py-8">
+                                <div className="inline-flex items-center gap-2 text-blue-600">
+                                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                                    <span>Loading schedule...</span>
+                                </div>
+                            </div>
+                        ) : selectedDateSchedules.length === 0 ? (
                             <div className="text-center py-8 text-gray-500">
                                 No classes scheduled for this date
                             </div>

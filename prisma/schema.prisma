@@ -16,7 +16,7 @@ model User {
   email             String             @unique
   phone             String
   password          String
-  college           String?            // Made optional
+  college           String? // Made optional
   branch            String
   batch             String
   year              Year               @default(FIRST)
