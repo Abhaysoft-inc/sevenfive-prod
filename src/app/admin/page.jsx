@@ -394,6 +394,31 @@ const AdminPanel = () => {
                     </div>
                 </div>
 
+                {/* Quick Actions */}
+                <div className="bg-white rounded-lg shadow-md p-6 mb-8">
+                    <h2 className="text-xl font-semibold mb-4">Quick Actions</h2>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <a
+                            href="/admin/schedules"
+                            className="bg-blue-600 text-white px-4 py-3 rounded-lg hover:bg-blue-700 transition text-center"
+                        >
+                            📅 Manage Schedules
+                        </a>
+                        <a
+                            href="/admin/timetable"
+                            className="bg-green-600 text-white px-4 py-3 rounded-lg hover:bg-green-700 transition text-center"
+                        >
+                            📋 View Timetable
+                        </a>
+                        <button
+                            onClick={() => setActiveTab('users')}
+                            className="bg-purple-600 text-white px-4 py-3 rounded-lg hover:bg-purple-700 transition"
+                        >
+                            👥 Manage Users
+                        </button>
+                    </div>
+                </div>
+
                 {/* Tab Navigation */}
                 <div className="flex justify-center mb-8">
                     <div className="bg-white rounded-lg shadow-md p-1">
