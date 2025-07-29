@@ -18,7 +18,9 @@ const TimetablePage = () => {
         subjectId: '',
         dayOfWeek: '',
         startTime: '',
-        endTime: ''
+        endTime: '',
+        validFrom: '',
+        validTo: ''
     });
     const router = useRouter();
 
@@ -134,7 +136,7 @@ const TimetablePage = () => {
             if (schedule.dayOfWeek !== day) return false;
             const scheduleStart = schedule.startTime;
             const scheduleEnd = schedule.endTime;
-            
+
             // Check if the schedule overlaps with this time slot
             return (scheduleStart < timeSlot.end && scheduleEnd > timeSlot.start);
         });
@@ -147,7 +149,9 @@ const TimetablePage = () => {
             subjectId: schedule.subjectId,
             dayOfWeek: schedule.dayOfWeek,
             startTime: schedule.startTime,
-            endTime: schedule.endTime
+            endTime: schedule.endTime,
+            validFrom: schedule.validFrom ? new Date(schedule.validFrom).toISOString().split('T')[0] : '',
+            validTo: schedule.validTo ? new Date(schedule.validTo).toISOString().split('T')[0] : ''
         });
     };
 
@@ -176,7 +180,9 @@ const TimetablePage = () => {
                     subjectId: '',
                     dayOfWeek: '',
                     startTime: '',
-                    endTime: ''
+                    endTime: '',
+                    validFrom: '',
+                    validTo: ''
                 });
             } else {
                 const errorData = await response.json();
@@ -366,7 +372,7 @@ const TimetablePage = () => {
                     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
                         <div className="bg-white rounded-lg p-6 w-full max-w-md">
                             <h2 className="text-xl font-bold mb-4">Edit Schedule</h2>
-                            
+
                             <form onSubmit={handleUpdateSchedule}>
                                 <div className="space-y-4">
                                     <div>
@@ -450,6 +456,34 @@ const TimetablePage = () => {
                                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                 required
                                             />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                Valid From <span className="text-red-500">*</span>
+                                            </label>
+                                            <input
+                                                type="date"
+                                                value={editForm.validFrom}
+                                                onChange={(e) => setEditForm({ ...editForm, validFrom: e.target.value })}
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                required
+                                            />
+                                            <p className="text-xs text-gray-500 mt-1">When this schedule becomes effective</p>
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                Valid To (Optional)
+                                            </label>
+                                            <input
+                                                type="date"
+                                                value={editForm.validTo}
+                                                onChange={(e) => setEditForm({ ...editForm, validTo: e.target.value })}
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                            <p className="text-xs text-gray-500 mt-1">Leave empty for ongoing schedule</p>
                                         </div>
                                     </div>
                                 </div>

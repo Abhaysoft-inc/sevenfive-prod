@@ -19,12 +19,17 @@ export async function GET(request: Request) {
 
         // Get user details
         const user = await prisma.user.findUnique({
-            where: { id: decoded.userId }
+            where: { id: decoded.userId },
+            select: { batch: true, branch: true, year: true }
         });
 
         if (!user) {
-            return NextResponse.json({ error: 'User not found' }, { status: 401 });
+            return NextResponse.json({ error: 'User not found' }, { status: 404 });
         }
+
+        const { searchParams } = new URL(request.url);
+        const date = searchParams.get('date');
+        const dayOfWeek = searchParams.get('dayOfWeek');
 
         // Find schedules for user's batch
         // First find the batch that matches user's branch, batch name, and year
@@ -42,11 +47,34 @@ export async function GET(request: Request) {
             return NextResponse.json({ schedules: [] }, { status: 200 });
         }
 
-        // Get schedules for this batch
+        let whereClause: any = {
+            batchId: userBatch.id
+        };
+
+        // If date is provided, filter by date ranges and calculate day of week
+        if (date) {
+            const queryDate = new Date(date);
+            whereClause.validFrom = { lte: queryDate };
+            whereClause.OR = [
+                { validTo: null },
+                { validTo: { gte: queryDate } }
+            ];
+
+            // If dayOfWeek is not provided, calculate it from date
+            if (!dayOfWeek) {
+                const days = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY'];
+                whereClause.dayOfWeek = days[queryDate.getDay()];
+            }
+        }
+
+        // If dayOfWeek is explicitly provided, use it
+        if (dayOfWeek) {
+            whereClause.dayOfWeek = dayOfWeek.toUpperCase();
+        }
+
+        // Get schedules for this batch with date filtering
         const schedules = await prisma.schedule.findMany({
-            where: {
-                batchId: userBatch.id
-            },
+            where: whereClause,
             include: {
                 subject: true,
                 batch: {
@@ -55,7 +83,9 @@ export async function GET(request: Request) {
                     }
                 }
             },
-            orderBy: [
+            orderBy: date ? [
+                { startTime: 'asc' }
+            ] : [
                 { dayOfWeek: 'asc' },
                 { startTime: 'asc' }
             ]

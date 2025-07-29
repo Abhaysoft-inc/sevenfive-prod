@@ -96,12 +96,14 @@ model Schedule {
   dayOfWeek DayOfWeek
   startTime String // Format: "HH:MM"
   endTime   String // Format: "HH:MM"
+  validFrom DateTime // The date from which this schedule is valid (inclusive)
+  validTo   DateTime? // The date until which this schedule is valid (inclusive, null = open-ended)
   batch     Batch     @relation(fields: [batchId], references: [id])
   subject   Subject   @relation(fields: [subjectId], references: [id])
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
 
-  @@unique([batchId, dayOfWeek, startTime])
+  @@unique([batchId, dayOfWeek, startTime, validFrom])
 }
 
 enum DayOfWeek {

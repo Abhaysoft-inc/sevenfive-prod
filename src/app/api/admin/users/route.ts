@@ -5,103 +5,117 @@ const prisma = new PrismaClient();
 
 export async function GET() {
     try {
-        // Fetch all users (both students and admins)
+        console.log('🔄 Fetching users with optimized queries...');
+
+        // Single query to get all users with their attendance data
         const users = await prisma.user.findMany({
+            include: {
+                attendanceRecords: {
+                    include: {
+                        subject: {
+                            select: {
+                                id: true,
+                                name: true,
+                                code: true,
+                                branch: true,
+                                year: true
+                            }
+                        }
+                    }
+                }
+            },
             orderBy: [
                 { role: 'asc' }, // Show admins first, then students
                 { name: 'asc' }
             ]
         });
 
-        console.log(`Found ${users.length} users`);
+        console.log(`✅ Found ${users.length} users with attendance data`);
 
-        // Calculate attendance statistics for each user
-        const userStats = await Promise.all(
-            users.map(async (user) => {
-                console.log(`Processing user: ${user.name}`);
-
-                // Skip attendance calculation for admin users
-                if (user.role === 'ADMIN') {
-                    return {
-                        userId: user.id,
-                        userName: user.name,
-                        totalClasses: 0,
-                        totalPresent: 0,
-                        overallPercentage: 0,
-                        subjectStats: []
-                    };
-                }
-
-                // Get all subjects for the user's branch and year (for students)
-                const subjects = await prisma.subject.findMany({
-                    where: {
-                        branch: user.branch,
-                        year: user.year
-                    }
-                });
-
-                console.log(`Found ${subjects.length} subjects for user ${user.name}`);
-
-                let totalClasses = 0;
-                let totalPresent = 0;
-                const subjectStats = [];
-
-                for (const subject of subjects) {
-                    // Get all attendance records for this user and subject
-                    const attendanceRecords = await prisma.attendanceRecord.findMany({
-                        where: {
-                            userId: user.id,
-                            subjectId: subject.id
-                        }
-                    });
-
-                    const totalSubjectClasses = attendanceRecords.length;
-                    const presentClasses = attendanceRecords.filter(
-                        record => record.status === 'PRESENT'
-                    ).length;
-
-                    if (totalSubjectClasses > 0) {
-                        const percentage = Math.round((presentClasses / totalSubjectClasses) * 100);
-                        subjectStats.push({
-                            subjectName: subject.name,
-                            subjectCode: subject.code,
-                            totalClasses: totalSubjectClasses,
-                            presentClasses,
-                            percentage
-                        });
-
-                        totalClasses += totalSubjectClasses;
-                        totalPresent += presentClasses;
-                    }
-                }
-
-                const overallPercentage = totalClasses > 0 ? Math.round((totalPresent / totalClasses) * 100) : 0;
-
+        // Process attendance statistics efficiently
+        const userStats = users.map(user => {
+            if (user.role === 'ADMIN') {
                 return {
                     userId: user.id,
                     userName: user.name,
-                    totalClasses,
-                    totalPresent,
-                    overallPercentage,
-                    subjectStats
+                    totalClasses: 0,
+                    totalPresent: 0,
+                    overallPercentage: 0,
+                    subjectStats: []
                 };
-            })
-        );
+            }
 
-        console.log(`Returning ${users.length} users and ${userStats.length} stats`);
+            // Group attendance by subject
+            const subjectMap = new Map();
+            
+            user.attendanceRecords.forEach(record => {
+                const subject = record.subject;
+                
+                // Only include subjects for user's branch and year
+                if (subject.branch === user.branch && subject.year === user.year) {
+                    if (!subjectMap.has(subject.id)) {
+                        subjectMap.set(subject.id, {
+                            subjectName: subject.name,
+                            subjectCode: subject.code,
+                            totalClasses: 0,
+                            presentClasses: 0
+                        });
+                    }
+                    
+                    const stats = subjectMap.get(subject.id);
+                    stats.totalClasses++;
+                    if (record.status === 'PRESENT') {
+                        stats.presentClasses++;
+                    }
+                }
+            });
+
+            // Calculate percentages and totals
+            let totalClasses = 0;
+            let totalPresent = 0;
+            const subjectStats = Array.from(subjectMap.values()).map(stats => {
+                const percentage = stats.totalClasses > 0 
+                    ? Math.round((stats.presentClasses / stats.totalClasses) * 100) 
+                    : 0;
+                
+                totalClasses += stats.totalClasses;
+                totalPresent += stats.presentClasses;
+                
+                return {
+                    ...stats,
+                    percentage
+                };
+            });
+
+            const overallPercentage = totalClasses > 0 
+                ? Math.round((totalPresent / totalClasses) * 100) 
+                : 0;
+
+            return {
+                userId: user.id,
+                userName: user.name,
+                totalClasses,
+                totalPresent,
+                overallPercentage,
+                subjectStats
+            };
+        });
+
+        console.log(`✅ Processed ${userStats.length} user statistics`);
+
+        // Remove attendance records from user data to reduce response size
+        const cleanUsers = users.map(({ attendanceRecords, ...user }) => user);
 
         return NextResponse.json({
-            users,
+            users: cleanUsers,
             stats: userStats
         });
 
     } catch (error) {
-        console.error('Error fetching users:', error);
+        console.error('❌ Error fetching users:', error);
         return NextResponse.json(
             { error: 'Failed to fetch users' },
             { status: 500 }
         );
-    } finally {
-        await prisma.$disconnect();
     }
 }

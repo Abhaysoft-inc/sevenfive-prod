@@ -1,0 +1,2729 @@
+{
+  "timestamp": "2025-07-28T19:43:57.054Z",
+  "users": [
+    {
+      "id": "36339020-1ab2-476e-84cd-3f94e2988716",
+      "name": "Administrator",
+      "email": "admin@sevenfive.com",
+      "phone": "1234567890",
+      "password": "$2b$10$5t4jH1lrQ.E6hhNKwP8Sq.VBbABDFCl.Lxf1MFjj.n8CsUTSUgmje",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "Admin",
+      "year": "SECOND",
+      "role": "ADMIN",
+      "createdAt": "2025-07-20T05:31:05.878Z",
+      "updatedAt": "2025-07-20T05:31:05.878Z"
+    },
+    {
+      "id": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "name": "Abhay Vishwakarma",
+      "email": "abhay.24305@knit.ac.in",
+      "phone": "8948041722",
+      "password": "$2b$10$uxMbY.mfPSmop3zNaEaxwO4dQP2CuQnvz0Z4g0TwpbD8hPXauG2Nq",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T08:34:48.838Z",
+      "updatedAt": "2025-07-20T08:34:48.838Z"
+    },
+    {
+      "id": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "name": "Aditya Pratap Singh ",
+      "email": "singhaditya3513@gmail.com",
+      "phone": "7525002304",
+      "password": "$2b$10$xKhSaMLVzKhDzOqAy3rJAe0WCBMOJcN2CQr/Zk3SvH8GAQFynnUOG",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T17:43:56.713Z",
+      "updatedAt": "2025-07-20T17:43:56.713Z"
+    },
+    {
+      "id": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "name": "Adish Singh ",
+      "email": "adish.24311@knit.ac.in",
+      "phone": "8303811032",
+      "password": "$2b$10$I5dC5gnJvn3q23ljZouB0euJjYsxft0jn/Du0tqUbVX4mWm2H/fnq",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T17:47:10.285Z",
+      "updatedAt": "2025-07-20T17:47:10.285Z"
+    },
+    {
+      "id": "de5c0b23-92e6-4a2d-a3cd-23784e6b7af3",
+      "name": "Ayushi Pal",
+      "email": "ayushipal9454@gmail.com",
+      "phone": "7607000688",
+      "password": "$2b$10$NNt8IMwFMK9FfInOaPHRu.Qh86wCvFYiyutZKcVnmE75Wmu2mszOW",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T17:57:31.608Z",
+      "updatedAt": "2025-07-20T17:57:31.608Z"
+    },
+    {
+      "id": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "name": "Divyansh Agrahari ",
+      "email": "divyanshagrahari9792bst@gmail.com",
+      "phone": "9565521625",
+      "password": "$2b$10$pHhkm5JvENnS/OzPRSvUAu2NzmlvWDGVc7JwCBmM110zyRJUwG2C2",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T18:02:43.027Z",
+      "updatedAt": "2025-07-20T18:02:43.027Z"
+    },
+    {
+      "id": "b4261b4f-6d0b-4564-bf61-bc8031ae438d",
+      "name": "Ishaan Pandey ",
+      "email": "ishaanmaybe@gmail.com",
+      "phone": "9198347345",
+      "password": "$2b$10$inAbnO4JLQhKrBZaMSXobuKRtUeIhzQFjGeW9Ii9dxaDndQ86Fy/6",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T18:19:57.467Z",
+      "updatedAt": "2025-07-20T18:19:57.467Z"
+    },
+    {
+      "id": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "name": "SURAJ PRASAD GUPTA",
+      "email": "sunnyroy92876@gmail.com",
+      "phone": "8795289756",
+      "password": "$2b$10$jeHSJRlHlH3nfzHqWIr3XeIqP/npJQiKKajzVMUgwl.Gm7iBaSMf.",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T18:23:36.579Z",
+      "updatedAt": "2025-07-20T18:23:36.579Z"
+    },
+    {
+      "id": "f776577a-2983-426f-b83f-6f371cdc6991",
+      "name": "Praveen Kumar",
+      "email": "pk1343784@gmail.com",
+      "phone": "8174058023",
+      "password": "$2b$10$EVbYwwAjlJfzpiAg0eUcIOtBIz.WS8xoaNbSVm52pDlEwo4.jIXzq",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-20T18:44:13.547Z",
+      "updatedAt": "2025-07-20T18:44:13.547Z"
+    },
+    {
+      "id": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "name": "Aditya kumar ",
+      "email": "adityaofc337@gmail.com",
+      "phone": "7985068494",
+      "password": "$2b$10$ItXbYumb5DVo514Hept5Led8sDBXVCTwYuqe2poIQCSpQikgA6fQu",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T04:58:03.639Z",
+      "updatedAt": "2025-07-21T04:58:03.639Z"
+    },
+    {
+      "id": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "name": "Aman maurya ",
+      "email": "aman.24319@knit.ac.in",
+      "phone": "8081914676",
+      "password": "$2b$10$60/b3OOFwzg/m1qov/bxp.3eSG0csrduyL/iOjxgFatnBPOz2NPmi",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T05:09:36.915Z",
+      "updatedAt": "2025-07-21T05:09:36.915Z"
+    },
+    {
+      "id": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "name": "Abhishek Kumar Verma",
+      "email": "vermabhishek6948@gmail.com",
+      "phone": "07007153286",
+      "password": "$2b$10$3EluM1yxXS.SBxSmIQMl6.zClb8OFCYe25lssalOXLiOP5ydu.b62",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T05:20:53.474Z",
+      "updatedAt": "2025-07-21T05:20:53.474Z"
+    },
+    {
+      "id": "a1a3c102-b805-421e-9a35-542d492447b6",
+      "name": "Adarsh Maddheshiya ",
+      "email": "adarshmaddheshiya156@gmail.com",
+      "phone": "8953251138",
+      "password": "$2b$10$Ok92DPFc7INggs5gUzIs9eFBK1Uar9imrncB5Sj0SkCfCfxSldF/y",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T05:40:04.172Z",
+      "updatedAt": "2025-07-21T05:40:04.172Z"
+    },
+    {
+      "id": "ac4393aa-d370-445f-82da-34f75d489c61",
+      "name": "Vaibhav ",
+      "email": "vaibh6336ji@gmail.com",
+      "phone": "9935422294",
+      "password": "$2b$10$SRC0qRkcUec1egWdeEJg0.vXzmHxs.e1OIJMyJytAl4m89ZkVmjmK",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T07:40:05.782Z",
+      "updatedAt": "2025-07-21T07:40:05.782Z"
+    },
+    {
+      "id": "cd877d14-1d62-4eda-b1c7-8d58f1b661d4",
+      "name": "Gaurav Pradhan ",
+      "email": "gauravoffical999@gmail.com",
+      "phone": "8755464798",
+      "password": "$2b$10$XkpL3uzBMTfYQ03La4c3qO07r/kykqZVJL2Mw/gslNh8ShNSFWGlu",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T08:53:28.266Z",
+      "updatedAt": "2025-07-21T08:53:28.266Z"
+    },
+    {
+      "id": "dc008d09-2a5d-4133-900f-064d7e7d3b32",
+      "name": "Sanskar ",
+      "email": "sanskarkumar210@gmail.com",
+      "phone": "7754910486",
+      "password": "$2b$10$6a6vCark8J5BCo1cYA.Y/O4GwThazeoyOyr4p/5q8Fu1EyUWr2x5u",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T13:55:40.946Z",
+      "updatedAt": "2025-07-21T13:55:40.946Z"
+    },
+    {
+      "id": "19ec349e-46b6-4c54-90bf-276003986831",
+      "name": "Swayam Prajapati ",
+      "email": "swayamprajapati77@gmail.com",
+      "phone": "9651737038",
+      "password": "$2b$10$kSsgpm5NDbQH/iTy5DuWO.y0qvpo83pNo4pKKxPv.PagBlndzQvuu",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-21T15:27:13.512Z",
+      "updatedAt": "2025-07-21T15:27:13.512Z"
+    },
+    {
+      "id": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "name": "Ritesh ",
+      "email": "ritesh.24354@knit.ac.in",
+      "phone": "7755004314",
+      "password": "$2b$10$u/nCSEM9IPRwCrdPiqCOIeHZVBFVCGx1jSC3crNli/Kn5bDPFnYTa",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-22T04:24:08.445Z",
+      "updatedAt": "2025-07-22T04:24:08.445Z"
+    },
+    {
+      "id": "82ed07af-38ef-4e2e-942c-ed377dcabf3f",
+      "name": "Aviral mishra",
+      "email": "mailofaviral22@gmail.com",
+      "phone": "8303956245",
+      "password": "$2b$10$WgaXBiS007tBR95Sfs2BGOhYrp11fATtWCQA7J3Cqc8g5mdk5RRDy",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-22T04:40:59.931Z",
+      "updatedAt": "2025-07-22T04:40:59.931Z"
+    },
+    {
+      "id": "05eb79cb-96a0-4230-a739-67a58f79488b",
+      "name": "Sanjay Chauhan ",
+      "email": "sc56197568@gmail.com",
+      "phone": "8736826213",
+      "password": "$2b$10$/wvQMUd9jGHTDZjeVqmnM.96tE9eYSA3hy4w6drRxMSAv2K8KF8Q6",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-22T06:01:23.373Z",
+      "updatedAt": "2025-07-22T06:01:23.373Z"
+    },
+    {
+      "id": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "name": "Raj Kushwaha ",
+      "email": "rkcr2212303@gmail.com",
+      "phone": "9506155912",
+      "password": "$2b$10$hGPfeLkE4.Ki.tmObLQneezTJiDQYaR/JPrUnXA0Ab/hIJnldQxG.",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-23T03:43:05.115Z",
+      "updatedAt": "2025-07-23T03:43:05.115Z"
+    },
+    {
+      "id": "7291cb2d-8194-4dbd-a281-81d59354ba10",
+      "name": "Nikunj Tiwari ",
+      "email": "tiwarijinikunj@gmail.com",
+      "phone": "8394894112",
+      "password": "$2b$10$4XhlcGBq9ctI5jp9aNEPV.9UtmY9WDmYAgWEKQHEGf02OvMlyG.o.",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-24T04:50:32.609Z",
+      "updatedAt": "2025-07-24T04:50:32.609Z"
+    },
+    {
+      "id": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "name": "Anmol Dubey ",
+      "email": "anmoldubey77769@gmail.com",
+      "phone": "9455554761",
+      "password": "$2b$10$Czl5OIoaJaeUtjacmsOIzOidXYEZ3yjywTq.PfeoQ/2wdhlywHX8e",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-24T04:56:52.680Z",
+      "updatedAt": "2025-07-24T04:56:52.680Z"
+    },
+    {
+      "id": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "name": "Aditya yadav",
+      "email": "adityaydv874@gmail.com",
+      "phone": "8306731330",
+      "password": "$2b$10$h.4Cg.HDoKZ9RaK7J9xGhuUe5Bn2EvqPY.WK8f.KcO7UH9BXUj2O6",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE1",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-24T05:02:35.767Z",
+      "updatedAt": "2025-07-24T05:02:35.767Z"
+    },
+    {
+      "id": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "name": "Swayam Prajapati ",
+      "email": "rajesh7007474465@gmail.com",
+      "phone": "09651737038",
+      "password": "$2b$10$JEYGUGU.2f/x2WBND/GxmOenS2HYm7Q2KvBDBC4huU.GLiSqdewEC",
+      "college": null,
+      "branch": "Electrical Engineering",
+      "batch": "EE2",
+      "year": "SECOND",
+      "role": "STUDENT",
+      "createdAt": "2025-07-24T13:28:38.577Z",
+      "updatedAt": "2025-07-24T13:28:38.577Z"
+    }
+  ],
+  "subjects": [
+    {
+      "id": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "name": "Electromagnetic Field Theory",
+      "code": "EMFT",
+      "branch": "Electrical Engineering",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:33:56.035Z",
+      "updatedAt": "2025-07-20T05:33:56.035Z"
+    },
+    {
+      "id": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "name": "Universal Human Value",
+      "code": "UHV",
+      "branch": "Electrical Engineering",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:34:11.824Z",
+      "updatedAt": "2025-07-20T05:34:11.824Z"
+    },
+    {
+      "id": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "name": "Basics of Signal and System",
+      "code": "BSS",
+      "branch": "Electrical Engineering",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:34:31.602Z",
+      "updatedAt": "2025-07-20T05:34:31.602Z"
+    },
+    {
+      "id": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "name": "Electrical Measurements and Instruments",
+      "code": "EM&I",
+      "branch": "Electrical Engineering",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:35:40.095Z",
+      "updatedAt": "2025-07-20T05:35:40.095Z"
+    },
+    {
+      "id": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "name": "Basic Database Management System",
+      "code": "BDMS",
+      "branch": "Electrical Engineering",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:36:18.007Z",
+      "updatedAt": "2025-07-20T05:36:18.007Z"
+    },
+    {
+      "id": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "name": "Cyber Security",
+      "code": "CS",
+      "branch": "Electrical Engineering",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:56:18.622Z",
+      "updatedAt": "2025-07-20T05:56:18.622Z"
+    }
+  ],
+  "branches": [
+    {
+      "id": "a5e0f1b2-5217-4a54-bc20-290a08a1534a",
+      "name": "Electrical Engineering",
+      "code": "EE",
+      "createdAt": "2025-07-20T05:33:04.772Z",
+      "updatedAt": "2025-07-20T05:33:04.772Z"
+    }
+  ],
+  "batches": [
+    {
+      "id": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "name": "EE1",
+      "branchId": "a5e0f1b2-5217-4a54-bc20-290a08a1534a",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:33:15.238Z",
+      "updatedAt": "2025-07-20T05:33:15.238Z"
+    },
+    {
+      "id": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "name": "EE2",
+      "branchId": "a5e0f1b2-5217-4a54-bc20-290a08a1534a",
+      "year": "SECOND",
+      "createdAt": "2025-07-20T05:33:23.195Z",
+      "updatedAt": "2025-07-20T05:33:23.195Z"
+    }
+  ],
+  "schedules": [
+    {
+      "id": "8f3fef61-d9ca-4d9e-92aa-8901f2369840",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "dayOfWeek": "THURSDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-20T08:27:29.367Z",
+      "updatedAt": "2025-07-20T08:27:29.367Z"
+    },
+    {
+      "id": "4205f7aa-3dd2-4f19-a61a-e500ae736817",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "dayOfWeek": "THURSDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-20T08:27:46.699Z",
+      "updatedAt": "2025-07-20T08:27:46.699Z"
+    },
+    {
+      "id": "3fe23f9b-4b30-4fe1-837d-01ea0b845942",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "dayOfWeek": "THURSDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-20T08:28:09.020Z",
+      "updatedAt": "2025-07-20T08:28:09.020Z"
+    },
+    {
+      "id": "ab0af18b-2d8e-4569-b8cc-9a9996d6cb33",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "dayOfWeek": "THURSDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-20T08:28:27.697Z",
+      "updatedAt": "2025-07-20T08:28:27.697Z"
+    },
+    {
+      "id": "dfde6d1e-1c77-4f2b-82d8-d58df11eac38",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "dayOfWeek": "THURSDAY",
+      "startTime": "11:10",
+      "endTime": "12:00",
+      "createdAt": "2025-07-20T08:29:09.568Z",
+      "updatedAt": "2025-07-20T08:29:09.568Z"
+    },
+    {
+      "id": "bff37692-d3ea-4c56-93cf-25aee227c3cb",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "dayOfWeek": "THURSDAY",
+      "startTime": "11:10",
+      "endTime": "12:00",
+      "createdAt": "2025-07-20T08:29:25.602Z",
+      "updatedAt": "2025-07-20T08:29:25.602Z"
+    },
+    {
+      "id": "ac5a7d98-63a1-4d80-984f-57d0a94099d8",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "dayOfWeek": "FRIDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-20T08:30:20.502Z",
+      "updatedAt": "2025-07-20T08:30:20.502Z"
+    },
+    {
+      "id": "a9cc1dd9-48ba-416e-9425-6a04f742805d",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "dayOfWeek": "FRIDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-20T08:30:42.929Z",
+      "updatedAt": "2025-07-20T08:30:42.929Z"
+    },
+    {
+      "id": "2f03519d-642b-4533-8653-5871acf57fb7",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "dayOfWeek": "FRIDAY",
+      "startTime": "12:00",
+      "endTime": "12:50",
+      "createdAt": "2025-07-20T08:31:21.209Z",
+      "updatedAt": "2025-07-20T08:31:21.209Z"
+    },
+    {
+      "id": "1dad0e48-2fb2-4eed-9d8e-1087214d2e71",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "dayOfWeek": "FRIDAY",
+      "startTime": "12:00",
+      "endTime": "12:50",
+      "createdAt": "2025-07-20T08:32:09.515Z",
+      "updatedAt": "2025-07-20T08:32:09.515Z"
+    },
+    {
+      "id": "4a56e37b-d98e-4851-87cf-7033c8dce878",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "dayOfWeek": "SATURDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-20T08:32:41.981Z",
+      "updatedAt": "2025-07-20T08:32:41.981Z"
+    },
+    {
+      "id": "158f5365-745e-46c6-a891-770542dce910",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "dayOfWeek": "SATURDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-20T08:33:01.874Z",
+      "updatedAt": "2025-07-20T08:33:01.874Z"
+    },
+    {
+      "id": "5c90e9e8-6402-4898-bff8-b2efcb1fb1bd",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "dayOfWeek": "SATURDAY",
+      "startTime": "12:00",
+      "endTime": "12:50",
+      "createdAt": "2025-07-20T08:33:23.587Z",
+      "updatedAt": "2025-07-20T08:33:23.587Z"
+    },
+    {
+      "id": "9b9eb4de-2637-43f7-923a-6e5982db0261",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "dayOfWeek": "SATURDAY",
+      "startTime": "12:00",
+      "endTime": "12:50",
+      "createdAt": "2025-07-20T08:33:38.702Z",
+      "updatedAt": "2025-07-20T08:33:38.702Z"
+    },
+    {
+      "id": "065c8e31-8539-43f1-87b3-97188fe5db7f",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "dayOfWeek": "MONDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-20T17:55:33.050Z",
+      "updatedAt": "2025-07-20T17:55:33.050Z"
+    },
+    {
+      "id": "089b15c9-20d1-4c13-a9df-4a87ce852169",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "dayOfWeek": "MONDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-20T17:55:46.223Z",
+      "updatedAt": "2025-07-20T17:55:46.223Z"
+    },
+    {
+      "id": "d866da08-4b7e-45dc-b7cf-58bf888c6701",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "dayOfWeek": "MONDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-20T17:58:20.800Z",
+      "updatedAt": "2025-07-20T17:58:20.800Z"
+    },
+    {
+      "id": "d8052ed2-b50a-4d76-aa78-71a4030d1c93",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "dayOfWeek": "MONDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-20T17:58:34.417Z",
+      "updatedAt": "2025-07-20T17:58:34.417Z"
+    },
+    {
+      "id": "393064dc-b66f-4f56-87a8-de4a41f97b27",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "dayOfWeek": "TUESDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-22T05:44:19.171Z",
+      "updatedAt": "2025-07-22T05:44:19.171Z"
+    },
+    {
+      "id": "80a63345-981b-410c-81c6-2665fd8b0a04",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "dayOfWeek": "TUESDAY",
+      "startTime": "09:30",
+      "endTime": "10:20",
+      "createdAt": "2025-07-22T05:44:32.839Z",
+      "updatedAt": "2025-07-22T05:44:32.839Z"
+    },
+    {
+      "id": "194b677c-8356-4016-94e9-2943f84825a6",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "dayOfWeek": "TUESDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-22T05:44:57.058Z",
+      "updatedAt": "2025-07-22T05:44:57.058Z"
+    },
+    {
+      "id": "3ada7b54-d6b9-49b3-aa5b-d0ce5d30f77d",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "dayOfWeek": "TUESDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-22T05:45:13.192Z",
+      "updatedAt": "2025-07-22T05:45:13.192Z"
+    },
+    {
+      "id": "cc23cf6d-d500-4449-ba8d-10aeffc48f04",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "dayOfWeek": "TUESDAY",
+      "startTime": "11:10",
+      "endTime": "12:00",
+      "createdAt": "2025-07-22T05:51:17.147Z",
+      "updatedAt": "2025-07-22T05:51:17.147Z"
+    },
+    {
+      "id": "3102c75d-82e5-4c3e-8dba-33daf595cad0",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "dayOfWeek": "TUESDAY",
+      "startTime": "11:10",
+      "endTime": "12:00",
+      "createdAt": "2025-07-22T05:51:42.132Z",
+      "updatedAt": "2025-07-22T05:51:42.132Z"
+    },
+    {
+      "id": "e84ddd25-8667-4be5-a72a-345599142355",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "dayOfWeek": "WEDNESDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-23T04:56:05.893Z",
+      "updatedAt": "2025-07-23T04:56:05.893Z"
+    },
+    {
+      "id": "773ea818-6266-4ff7-864d-b239637ccd84",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "dayOfWeek": "WEDNESDAY",
+      "startTime": "10:20",
+      "endTime": "11:10",
+      "createdAt": "2025-07-23T04:56:20.076Z",
+      "updatedAt": "2025-07-23T04:56:20.076Z"
+    },
+    {
+      "id": "7a14f37f-8549-4787-bc6b-f7cd62c59892",
+      "batchId": "42d6c296-13bf-496b-82a1-22bedf3293ab",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "dayOfWeek": "WEDNESDAY",
+      "startTime": "11:10",
+      "endTime": "12:00",
+      "createdAt": "2025-07-23T04:56:37.512Z",
+      "updatedAt": "2025-07-23T04:56:37.512Z"
+    },
+    {
+      "id": "08c99afc-a8ac-4ad1-9152-63a199adc0d5",
+      "batchId": "c0609e40-1efc-4f40-8f7a-07ed7c66eaed",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "dayOfWeek": "WEDNESDAY",
+      "startTime": "11:10",
+      "endTime": "12:00",
+      "createdAt": "2025-07-23T04:56:49.927Z",
+      "updatedAt": "2025-07-23T04:56:49.927Z"
+    }
+  ],
+  "attendanceRecords": [
+    {
+      "id": "2ee21b76-d5a2-4a81-a8db-3efa98aea7f4",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T08:35:11.198Z",
+      "updatedAt": "2025-07-20T08:35:11.198Z"
+    },
+    {
+      "id": "de9fc633-9e7e-4f9f-ad3d-71f859b5af58",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T08:35:13.166Z",
+      "updatedAt": "2025-07-20T08:35:13.166Z"
+    },
+    {
+      "id": "c3c3305a-50ff-4bb4-b4a5-c92fe9e7d9e8",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T08:35:19.030Z",
+      "updatedAt": "2025-07-20T08:35:19.030Z"
+    },
+    {
+      "id": "5f72a571-f049-442b-b34a-8dc51939abdd",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T08:35:20.538Z",
+      "updatedAt": "2025-07-20T08:35:20.538Z"
+    },
+    {
+      "id": "5ae56893-9199-4028-9883-00d7b9d4b4de",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T08:35:25.799Z",
+      "updatedAt": "2025-07-20T08:35:25.799Z"
+    },
+    {
+      "id": "121721f2-a33e-41a2-94bc-ad30fd35789c",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T08:35:27.359Z",
+      "updatedAt": "2025-07-20T08:35:27.359Z"
+    },
+    {
+      "id": "9747eb83-2d86-4c02-970a-bc86b8576786",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T08:35:28.875Z",
+      "updatedAt": "2025-07-20T08:35:28.875Z"
+    },
+    {
+      "id": "678fdabe-7b6e-4287-8799-753f10955ef4",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:44:30.245Z",
+      "updatedAt": "2025-07-20T17:44:30.245Z"
+    },
+    {
+      "id": "0b41a5e6-472b-44d6-ab06-a14f265c45fd",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:44:31.579Z",
+      "updatedAt": "2025-07-20T17:44:31.579Z"
+    },
+    {
+      "id": "70bad63e-8c55-491a-8960-3522a3522ded",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:44:32.828Z",
+      "updatedAt": "2025-07-20T17:44:32.828Z"
+    },
+    {
+      "id": "9f5b00bc-07d2-484c-baae-604470a59f48",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:44:41.080Z",
+      "updatedAt": "2025-07-20T17:44:41.080Z"
+    },
+    {
+      "id": "c6d170c0-d62b-4912-8d89-158515d904a3",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:44:43.500Z",
+      "updatedAt": "2025-07-20T17:44:43.500Z"
+    },
+    {
+      "id": "2d7c4178-3bab-438f-b3e3-2acc05b93ba4",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:44:49.184Z",
+      "updatedAt": "2025-07-20T17:44:49.184Z"
+    },
+    {
+      "id": "83575d35-6a86-4288-83d7-4e087b529599",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:44:52.186Z",
+      "updatedAt": "2025-07-20T17:44:52.186Z"
+    },
+    {
+      "id": "bb23f32f-4e4d-4b59-a643-e1c5e0506b20",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:47:28.893Z",
+      "updatedAt": "2025-07-20T17:47:28.893Z"
+    },
+    {
+      "id": "8498f67d-dc0a-411e-9c8d-e949b23c79aa",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:47:30.259Z",
+      "updatedAt": "2025-07-20T17:47:30.259Z"
+    },
+    {
+      "id": "889b68a5-a00d-4e17-941a-96f5fbed5f0d",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:47:30.933Z",
+      "updatedAt": "2025-07-20T17:47:30.933Z"
+    },
+    {
+      "id": "00d560f2-e80d-4437-93c3-9dc9abab2f75",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:47:42.414Z",
+      "updatedAt": "2025-07-20T17:47:42.414Z"
+    },
+    {
+      "id": "b134f6f0-d161-4386-b6ba-1fbdf5f77be0",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:47:43.128Z",
+      "updatedAt": "2025-07-20T17:47:43.128Z"
+    },
+    {
+      "id": "e532fc5b-c06b-418e-bc11-eea65be42d4a",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:47:46.905Z",
+      "updatedAt": "2025-07-20T17:47:46.905Z"
+    },
+    {
+      "id": "175c0b0d-191d-44ca-b9b6-cef4e2409b3d",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T17:47:47.452Z",
+      "updatedAt": "2025-07-20T17:47:47.452Z"
+    },
+    {
+      "id": "eb1cfbf7-a074-41e6-bd8f-a10cd49e8d88",
+      "userId": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:03:43.502Z",
+      "updatedAt": "2025-07-20T18:03:43.502Z"
+    },
+    {
+      "id": "f6da6172-22af-4017-a126-7ac43c18dd21",
+      "userId": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:03:44.890Z",
+      "updatedAt": "2025-07-20T18:03:44.890Z"
+    },
+    {
+      "id": "b891ffa4-7878-4ae4-82a4-f564e1677087",
+      "userId": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:03:49.367Z",
+      "updatedAt": "2025-07-20T18:03:49.367Z"
+    },
+    {
+      "id": "7be011ac-b5ae-4a46-9897-98cc09c73993",
+      "userId": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:03:50.285Z",
+      "updatedAt": "2025-07-20T18:03:50.285Z"
+    },
+    {
+      "id": "5b586533-23c7-4cfe-8dcf-e88af69e7299",
+      "userId": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:04:33.438Z",
+      "updatedAt": "2025-07-20T18:04:33.438Z"
+    },
+    {
+      "id": "c888d443-2a86-4df1-ae4c-b1b22be95cb9",
+      "userId": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:04:34.588Z",
+      "updatedAt": "2025-07-20T18:04:34.588Z"
+    },
+    {
+      "id": "30b35078-1679-43fb-8606-c84e608d95d8",
+      "userId": "e752aeff-2a62-46ae-b5ef-a7285d5595d0",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:04:35.728Z",
+      "updatedAt": "2025-07-20T18:04:35.728Z"
+    },
+    {
+      "id": "5045a7da-c0bb-4472-aec0-2936c08753b2",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:01.431Z",
+      "updatedAt": "2025-07-20T18:24:01.431Z"
+    },
+    {
+      "id": "e8cf7f3a-3048-4bb7-8060-72c77cc1893b",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:04.198Z",
+      "updatedAt": "2025-07-20T18:24:04.198Z"
+    },
+    {
+      "id": "3d251ab0-d36a-4643-874a-0d957196d840",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:07.356Z",
+      "updatedAt": "2025-07-20T18:24:07.356Z"
+    },
+    {
+      "id": "eb0c2226-fdc7-4b42-bffd-34a2e958edc7",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:12.967Z",
+      "updatedAt": "2025-07-20T18:24:12.967Z"
+    },
+    {
+      "id": "45cc1b9e-04b0-488b-a6a0-5f6c5a989e07",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:13.512Z",
+      "updatedAt": "2025-07-20T18:24:13.512Z"
+    },
+    {
+      "id": "959d130d-288d-4a77-ba0e-f8238c9d4a9b",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:17.885Z",
+      "updatedAt": "2025-07-20T18:24:17.885Z"
+    },
+    {
+      "id": "7911e9af-93a7-4ba9-a368-ee362df81b62",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:18.146Z",
+      "updatedAt": "2025-07-20T18:24:18.146Z"
+    },
+    {
+      "id": "ace13a7c-6cf5-4653-a460-737e87eb57be",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:32.560Z",
+      "updatedAt": "2025-07-20T18:24:38.281Z"
+    },
+    {
+      "id": "809b179d-89e8-4f93-907a-8e7c2295e6c9",
+      "userId": "2fe40f04-0220-45a2-8dab-9012af90dc2a",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-20T18:24:31.461Z",
+      "updatedAt": "2025-07-20T18:24:44.562Z"
+    },
+    {
+      "id": "218e7024-2463-43a4-9db8-96825f9dc979",
+      "userId": "f776577a-2983-426f-b83f-6f371cdc6991",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-20T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-20T18:45:13.214Z",
+      "updatedAt": "2025-07-20T18:45:13.214Z"
+    },
+    {
+      "id": "16c37be6-1bc3-49ba-9aa3-6f11b6021e7e",
+      "userId": "f776577a-2983-426f-b83f-6f371cdc6991",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-20T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-20T18:45:16.237Z",
+      "updatedAt": "2025-07-20T18:45:16.237Z"
+    },
+    {
+      "id": "75167687-bd61-492c-a414-fd812371191d",
+      "userId": "f776577a-2983-426f-b83f-6f371cdc6991",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-20T18:45:30.261Z",
+      "updatedAt": "2025-07-20T18:45:43.459Z"
+    },
+    {
+      "id": "1f917e4e-cc3b-48bb-a848-3fa1ba35c3b0",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T04:58:20.878Z",
+      "updatedAt": "2025-07-21T04:58:20.878Z"
+    },
+    {
+      "id": "e57b15d8-bf63-4b2c-a398-cdb95e67a0bf",
+      "userId": "f776577a-2983-426f-b83f-6f371cdc6991",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-20T18:45:28.852Z",
+      "updatedAt": "2025-07-20T18:45:42.108Z"
+    },
+    {
+      "id": "f1b6fbb2-17ee-433f-9fb2-ea4bd4774e04",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T04:58:21.555Z",
+      "updatedAt": "2025-07-21T04:58:21.555Z"
+    },
+    {
+      "id": "d06f436d-10ea-4030-8d4f-52b92baf37f8",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:10:25.807Z",
+      "updatedAt": "2025-07-21T05:10:25.807Z"
+    },
+    {
+      "id": "106d347f-9c7e-45a3-a148-10cba5ebe3bf",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:10:26.979Z",
+      "updatedAt": "2025-07-21T05:10:26.979Z"
+    },
+    {
+      "id": "a4baf42f-eb46-43fa-87be-f6db44a2af77",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:09:50.187Z",
+      "updatedAt": "2025-07-21T14:26:04.709Z"
+    },
+    {
+      "id": "bb66e7d5-d77f-4719-8c34-2db77b8e122c",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:10:30.822Z",
+      "updatedAt": "2025-07-21T05:10:30.822Z"
+    },
+    {
+      "id": "2e16e225-1c30-41e2-89cd-494706d59530",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:10:31.969Z",
+      "updatedAt": "2025-07-21T05:10:31.969Z"
+    },
+    {
+      "id": "b3141115-db7b-4c5b-b7b6-84ab6aba868d",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:10:37.076Z",
+      "updatedAt": "2025-07-21T05:10:37.076Z"
+    },
+    {
+      "id": "b75174e0-3de0-463f-8fa4-4c5e8bcba610",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:10:38.213Z",
+      "updatedAt": "2025-07-21T05:10:38.213Z"
+    },
+    {
+      "id": "84a9ffe2-b06f-440b-a6be-ffbb43fcfaaa",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:10:39.501Z",
+      "updatedAt": "2025-07-21T05:10:39.501Z"
+    },
+    {
+      "id": "a97696e0-92f4-4466-b425-89e5489758ad",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:15:02.548Z",
+      "updatedAt": "2025-07-21T05:15:02.548Z"
+    },
+    {
+      "id": "391035c3-9d40-4e5a-a9d6-a13bbcec0651",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:15:03.313Z",
+      "updatedAt": "2025-07-21T05:15:03.313Z"
+    },
+    {
+      "id": "0808e9dd-9929-4d27-9ff9-0d9669163dea",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:15:03.809Z",
+      "updatedAt": "2025-07-21T05:15:03.809Z"
+    },
+    {
+      "id": "8ab190de-243f-4590-aabf-bd062c26d152",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:15:09.465Z",
+      "updatedAt": "2025-07-21T05:15:09.465Z"
+    },
+    {
+      "id": "6fd88f9f-d2c9-4856-8d4c-70b8fb163682",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:15:11.706Z",
+      "updatedAt": "2025-07-21T05:15:11.706Z"
+    },
+    {
+      "id": "a9fde10a-5e33-4c1a-af1b-64408a58d44a",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:15:16.651Z",
+      "updatedAt": "2025-07-21T05:15:16.651Z"
+    },
+    {
+      "id": "c1cd629d-115c-4d9a-9de2-0cf95d22813a",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:15:17.573Z",
+      "updatedAt": "2025-07-21T05:15:17.573Z"
+    },
+    {
+      "id": "4b840c0c-6471-4188-be08-be2e553305fb",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:11.360Z",
+      "updatedAt": "2025-07-21T05:21:11.360Z"
+    },
+    {
+      "id": "6d2b4943-53f8-4643-b429-48f2014f49a4",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:14.005Z",
+      "updatedAt": "2025-07-21T05:21:14.005Z"
+    },
+    {
+      "id": "1089da69-3480-453b-a4f5-843f30166824",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:29.618Z",
+      "updatedAt": "2025-07-21T05:21:29.618Z"
+    },
+    {
+      "id": "06329537-242d-49b3-83b1-faa90f5a80f9",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:31.328Z",
+      "updatedAt": "2025-07-21T05:21:31.328Z"
+    },
+    {
+      "id": "ad546281-d908-464f-9a97-7aed30de59bf",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:32.309Z",
+      "updatedAt": "2025-07-21T05:21:32.309Z"
+    },
+    {
+      "id": "25ae8fc7-fa66-4d8d-a53a-39891b5f3505",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:45.703Z",
+      "updatedAt": "2025-07-21T05:21:45.703Z"
+    },
+    {
+      "id": "55bf71ab-7810-49ff-add6-577984c89a78",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:46.294Z",
+      "updatedAt": "2025-07-21T05:21:46.294Z"
+    },
+    {
+      "id": "fbc4aaa1-5cfd-4b46-9f1e-61275409fdfd",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:50.266Z",
+      "updatedAt": "2025-07-21T05:21:50.266Z"
+    },
+    {
+      "id": "5a21b25a-0c77-45a7-8b08-d9dd84602756",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:21:50.886Z",
+      "updatedAt": "2025-07-21T05:21:50.886Z"
+    },
+    {
+      "id": "ed7dd8aa-79ea-4101-8db4-a142412c42df",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:27:50.226Z",
+      "updatedAt": "2025-07-21T05:27:50.226Z"
+    },
+    {
+      "id": "e43e810a-6a42-4fb0-b0d9-ce3f39232908",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:27:51.582Z",
+      "updatedAt": "2025-07-21T05:27:51.582Z"
+    },
+    {
+      "id": "e23e1d9e-6a8b-4e5e-8b5c-4ef29928349d",
+      "userId": "a1a3c102-b805-421e-9a35-542d492447b6",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:40:36.023Z",
+      "updatedAt": "2025-07-21T05:40:36.023Z"
+    },
+    {
+      "id": "381627df-8bb0-47dc-a8ea-b8dfeedee94e",
+      "userId": "a1a3c102-b805-421e-9a35-542d492447b6",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:40:39.870Z",
+      "updatedAt": "2025-07-21T05:40:39.870Z"
+    },
+    {
+      "id": "b5d33c60-e741-4f8f-afe7-382194c7d6e1",
+      "userId": "ac4393aa-d370-445f-82da-34f75d489c61",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-21T07:40:54.609Z",
+      "updatedAt": "2025-07-21T07:40:54.609Z"
+    },
+    {
+      "id": "d3118081-dfe7-48ae-90f3-96bba64b3a10",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T07:32:13.987Z",
+      "updatedAt": "2025-07-22T07:32:13.987Z"
+    },
+    {
+      "id": "0b88c113-77a6-4dd8-81ac-d19e5de70e74",
+      "userId": "cd877d14-1d62-4eda-b1c7-8d58f1b661d4",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-21T08:54:44.185Z",
+      "updatedAt": "2025-07-21T08:54:47.925Z"
+    },
+    {
+      "id": "bcd37eb4-3341-40ed-b075-825c1fb532ce",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T12:58:04.865Z",
+      "updatedAt": "2025-07-21T12:58:04.865Z"
+    },
+    {
+      "id": "279afeec-50f3-4aa1-9f42-58a43248a97c",
+      "userId": "1afe0cb6-30ff-4afd-860e-223d5dc97de8",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T12:58:12.325Z",
+      "updatedAt": "2025-07-21T12:58:12.325Z"
+    },
+    {
+      "id": "3b8979e6-ad8c-437f-bb7c-35b845a63af7",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-21T05:09:47.226Z",
+      "updatedAt": "2025-07-21T14:26:03.661Z"
+    },
+    {
+      "id": "10e48e61-8d10-4248-b6fd-e54cda84c80f",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:45:17.727Z",
+      "updatedAt": "2025-07-22T05:45:17.727Z"
+    },
+    {
+      "id": "badeeed4-1d34-47a8-b8a2-7a19e0a28ed3",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:45:19.074Z",
+      "updatedAt": "2025-07-22T05:45:19.074Z"
+    },
+    {
+      "id": "049e36c0-ef93-4bbe-a3aa-c800457b6b14",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:45:24.839Z",
+      "updatedAt": "2025-07-22T05:45:24.839Z"
+    },
+    {
+      "id": "0d130e00-e862-41c4-8efa-e68a8165fbc3",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:45:26.138Z",
+      "updatedAt": "2025-07-22T05:45:26.138Z"
+    },
+    {
+      "id": "ed48f705-725c-4f4b-a00b-cb1c91b9ecdc",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:45:45.270Z",
+      "updatedAt": "2025-07-22T05:45:45.270Z"
+    },
+    {
+      "id": "e173f081-6d2f-483f-b9a9-4a9c4c557e31",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:51:54.564Z",
+      "updatedAt": "2025-07-22T05:51:54.564Z"
+    },
+    {
+      "id": "f855ce96-6088-4d81-b164-1c8f5c7df4b5",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:52:40.704Z",
+      "updatedAt": "2025-07-22T05:52:40.704Z"
+    },
+    {
+      "id": "a0a52d46-193d-49e4-881b-db6b0568db01",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:52:41.449Z",
+      "updatedAt": "2025-07-22T05:52:41.449Z"
+    },
+    {
+      "id": "ffaeaccd-d638-4ddb-a842-4fafd4ff0f7d",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:52:42.242Z",
+      "updatedAt": "2025-07-22T05:52:42.242Z"
+    },
+    {
+      "id": "76a213d7-3191-400c-9500-72413f210110",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T07:32:13.256Z",
+      "updatedAt": "2025-07-22T07:32:13.256Z"
+    },
+    {
+      "id": "ce090df1-6aec-4eb2-90dd-9d392ee880ae",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T07:32:14.559Z",
+      "updatedAt": "2025-07-22T07:32:14.559Z"
+    },
+    {
+      "id": "f89035c9-e077-43f2-89e3-913532891430",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T09:04:48.655Z",
+      "updatedAt": "2025-07-22T09:05:08.170Z"
+    },
+    {
+      "id": "9bda42cf-24f8-4116-87e0-47828517a3ec",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T09:04:49.968Z",
+      "updatedAt": "2025-07-22T09:05:09.367Z"
+    },
+    {
+      "id": "a4efc328-61a9-4ab8-8795-455ed01100bb",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T09:04:51.112Z",
+      "updatedAt": "2025-07-22T09:05:09.971Z"
+    },
+    {
+      "id": "8cf6dda4-2746-416b-a1eb-20c2f4525b42",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:43:50.861Z",
+      "updatedAt": "2025-07-23T03:43:50.861Z"
+    },
+    {
+      "id": "ba9c0b2e-745b-4f3b-bf9c-378d6ae91033",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:43:52.971Z",
+      "updatedAt": "2025-07-23T03:43:52.971Z"
+    },
+    {
+      "id": "954f7b65-9990-43ec-a836-569c8e16fce8",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:02.230Z",
+      "updatedAt": "2025-07-23T03:44:02.230Z"
+    },
+    {
+      "id": "1c74023a-6c83-40b9-b89b-3daf913bdcde",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:02.938Z",
+      "updatedAt": "2025-07-23T03:44:02.938Z"
+    },
+    {
+      "id": "70af3490-684b-4c29-bf9c-427e851a5153",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:03.866Z",
+      "updatedAt": "2025-07-23T03:44:03.866Z"
+    },
+    {
+      "id": "47356d57-c919-47c8-9285-5e73eae96ab7",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:08.364Z",
+      "updatedAt": "2025-07-23T03:44:08.364Z"
+    },
+    {
+      "id": "866164d4-c87d-4d46-8a33-bd65940d7274",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:09.668Z",
+      "updatedAt": "2025-07-23T03:44:09.668Z"
+    },
+    {
+      "id": "bd8e5bc8-c33d-43b9-9146-ccdfd03a0ca8",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:18.243Z",
+      "updatedAt": "2025-07-23T03:44:18.243Z"
+    },
+    {
+      "id": "3e972c5e-0d0f-498e-8126-b269e18ce64b",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:19.362Z",
+      "updatedAt": "2025-07-23T03:44:19.362Z"
+    },
+    {
+      "id": "47a4c183-0496-42dd-b320-81735176ab94",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:30.026Z",
+      "updatedAt": "2025-07-23T03:44:30.026Z"
+    },
+    {
+      "id": "4a4e26bd-65f2-4f3f-90ea-3ad391d967cb",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:30.643Z",
+      "updatedAt": "2025-07-23T03:44:30.643Z"
+    },
+    {
+      "id": "9a0b36f9-cfca-4a65-a338-b14151395328",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T03:44:31.236Z",
+      "updatedAt": "2025-07-23T03:44:31.236Z"
+    },
+    {
+      "id": "5f7809af-ef26-49bc-ab73-5ceb9a987a36",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:56:11.013Z",
+      "updatedAt": "2025-07-23T04:56:11.013Z"
+    },
+    {
+      "id": "b0847883-e7e0-408f-b49d-6b08ebcfe654",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:56:13.498Z",
+      "updatedAt": "2025-07-23T04:56:13.498Z"
+    },
+    {
+      "id": "ec0afc1c-3348-4b23-8e78-66e82528580d",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:57:07.980Z",
+      "updatedAt": "2025-07-23T04:57:07.980Z"
+    },
+    {
+      "id": "e7b41fff-d2dc-490f-8d5c-4eb2ed5a6af1",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:57:08.867Z",
+      "updatedAt": "2025-07-23T04:57:08.867Z"
+    },
+    {
+      "id": "ba402dba-8c44-49b0-9482-bc55ea0a7bdf",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:11.767Z",
+      "updatedAt": "2025-07-23T04:58:11.767Z"
+    },
+    {
+      "id": "efaf0a3b-6bb2-47a8-b1c6-78f466f162ac",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:13.786Z",
+      "updatedAt": "2025-07-23T04:58:13.786Z"
+    },
+    {
+      "id": "7e49ad56-a919-4d35-bd39-e3dfbea0c097",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:15.357Z",
+      "updatedAt": "2025-07-23T04:58:15.357Z"
+    },
+    {
+      "id": "c10007c1-fbec-40ef-b049-f59339fc371f",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:19.714Z",
+      "updatedAt": "2025-07-23T04:58:19.714Z"
+    },
+    {
+      "id": "d5152fd9-6d76-45a0-97b6-a8f8ab821de0",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:20.849Z",
+      "updatedAt": "2025-07-23T04:58:20.849Z"
+    },
+    {
+      "id": "40615784-9919-43aa-b693-88329cbabe48",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:22.896Z",
+      "updatedAt": "2025-07-23T04:58:22.896Z"
+    },
+    {
+      "id": "0324896b-f9d2-4fe7-9b8a-e13f0bfa7437",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:28.904Z",
+      "updatedAt": "2025-07-23T04:58:28.904Z"
+    },
+    {
+      "id": "55e2c359-2dc6-4536-87f3-7bd49c6472ff",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:30.793Z",
+      "updatedAt": "2025-07-23T04:58:30.793Z"
+    },
+    {
+      "id": "64c860ce-bf42-4865-9416-fd7aa20454a6",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:41.490Z",
+      "updatedAt": "2025-07-23T04:58:41.490Z"
+    },
+    {
+      "id": "4ba0c712-cbf1-4eee-adbf-9a6015e72f16",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:43.054Z",
+      "updatedAt": "2025-07-23T04:58:43.054Z"
+    },
+    {
+      "id": "25298415-2a0c-41d3-a00c-34afcbee01ef",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:50.543Z",
+      "updatedAt": "2025-07-23T04:58:50.543Z"
+    },
+    {
+      "id": "6f327e8d-0ebe-4fa5-9418-df2af5695d89",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:52.386Z",
+      "updatedAt": "2025-07-23T04:58:52.386Z"
+    },
+    {
+      "id": "64b9d600-eacb-4850-976f-4f57a317ee05",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:54.074Z",
+      "updatedAt": "2025-07-23T04:58:54.074Z"
+    },
+    {
+      "id": "f37262d0-c959-42b8-a9d8-b77eb129e615",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:59.510Z",
+      "updatedAt": "2025-07-23T05:00:21.073Z"
+    },
+    {
+      "id": "fc6eabb4-ead4-485c-a1ed-ce9e0958455a",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:04:24.407Z",
+      "updatedAt": "2025-07-24T04:04:24.407Z"
+    },
+    {
+      "id": "72aeffa6-b1ac-4a85-8ca2-2bbd613a140d",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:28:13.589Z",
+      "updatedAt": "2025-07-24T04:28:13.589Z"
+    },
+    {
+      "id": "f17fcdd6-f9b0-4535-9b2b-348881a5a27a",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T05:00:27.282Z",
+      "updatedAt": "2025-07-23T05:00:33.047Z"
+    },
+    {
+      "id": "0aa57786-5f20-4ee0-9112-3e35bc41cb21",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T05:01:12.179Z",
+      "updatedAt": "2025-07-23T05:01:12.179Z"
+    },
+    {
+      "id": "02d04613-0772-4569-b9c7-a82e1b4a5f91",
+      "userId": "22634b5c-fafc-467c-b985-c5d1e0754d77",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T05:01:13.843Z",
+      "updatedAt": "2025-07-23T05:01:13.843Z"
+    },
+    {
+      "id": "9e8a75e0-3887-45d0-bf98-d0e65d099ce2",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T07:13:35.216Z",
+      "updatedAt": "2025-07-23T07:13:35.216Z"
+    },
+    {
+      "id": "9f519d35-e2fd-4be8-ab99-42682d063d08",
+      "userId": "a1a3c102-b805-421e-9a35-542d492447b6",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T10:14:13.916Z",
+      "updatedAt": "2025-07-23T10:23:13.280Z"
+    },
+    {
+      "id": "0fb7651c-4ffc-48c3-a9bd-9799ce329c48",
+      "userId": "a1a3c102-b805-421e-9a35-542d492447b6",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T10:14:20.838Z",
+      "updatedAt": "2025-07-23T10:23:16.550Z"
+    },
+    {
+      "id": "8c3e3b04-764e-4321-8a3b-0cb773a1db4a",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T03:29:57.400Z",
+      "updatedAt": "2025-07-24T03:29:57.400Z"
+    },
+    {
+      "id": "9f3fe94b-ecb0-4367-a441-136c5cb87872",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:28:15.206Z",
+      "updatedAt": "2025-07-24T04:28:15.206Z"
+    },
+    {
+      "id": "9bfe9bae-a8be-4b54-a4f5-e954c797b97e",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:28:16.655Z",
+      "updatedAt": "2025-07-24T04:28:16.655Z"
+    },
+    {
+      "id": "033b2c57-0eb9-426b-8f06-95153c44fb09",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:29:01.953Z",
+      "updatedAt": "2025-07-24T04:29:01.953Z"
+    },
+    {
+      "id": "fcd676fb-d796-4094-97c8-28ada38e56b9",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:29:28.142Z",
+      "updatedAt": "2025-07-24T04:29:28.142Z"
+    },
+    {
+      "id": "d224ad77-ca39-474d-af93-3e484ed1c538",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:29:42.313Z",
+      "updatedAt": "2025-07-24T04:29:42.313Z"
+    },
+    {
+      "id": "917aeb19-fdc4-4cb9-b5f5-d41f958f87e7",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:29:23.643Z",
+      "updatedAt": "2025-07-24T04:30:31.239Z"
+    },
+    {
+      "id": "542c53d2-b345-4d08-a499-6e2f32d090cd",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-23T04:58:20.525Z",
+      "updatedAt": "2025-07-27T05:32:26.689Z"
+    },
+    {
+      "id": "2c718ec8-e405-4068-a127-1356e0d86574",
+      "userId": "7291cb2d-8194-4dbd-a281-81d59354ba10",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:51:38.241Z",
+      "updatedAt": "2025-07-24T04:51:38.241Z"
+    },
+    {
+      "id": "414a76ba-1347-4f9e-9647-381ede3dbbb8",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:12.680Z",
+      "updatedAt": "2025-07-24T04:57:12.680Z"
+    },
+    {
+      "id": "6eb1a66c-3f78-4821-9368-72d4d2d7acd5",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:15.038Z",
+      "updatedAt": "2025-07-24T04:57:15.038Z"
+    },
+    {
+      "id": "c4ee3009-4548-4465-814a-106c8fd3f05b",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:29.192Z",
+      "updatedAt": "2025-07-24T04:57:29.192Z"
+    },
+    {
+      "id": "7eab1054-6189-48af-b298-dcd128791a03",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:31.133Z",
+      "updatedAt": "2025-07-24T04:57:31.133Z"
+    },
+    {
+      "id": "f339226f-cc98-49a5-ac6a-710dfa44eb5f",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:43.730Z",
+      "updatedAt": "2025-07-24T04:57:43.730Z"
+    },
+    {
+      "id": "05333c5d-fe59-40cb-bb1e-078d8c1fd10c",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:45.874Z",
+      "updatedAt": "2025-07-24T04:57:45.874Z"
+    },
+    {
+      "id": "febe0979-0af4-4359-9c9a-d17c8e00cae3",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:52.487Z",
+      "updatedAt": "2025-07-24T04:57:52.487Z"
+    },
+    {
+      "id": "90b2858f-df53-4855-892c-3c241fad3262",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:57:59.851Z",
+      "updatedAt": "2025-07-24T04:57:59.851Z"
+    },
+    {
+      "id": "3d4fdf40-9c6e-4ed8-a7f8-998ccc7845da",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:58:01.172Z",
+      "updatedAt": "2025-07-24T04:58:01.172Z"
+    },
+    {
+      "id": "1ff5aae2-a229-4cb6-b172-a73372afd685",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:58:12.019Z",
+      "updatedAt": "2025-07-24T04:58:12.019Z"
+    },
+    {
+      "id": "da616a4c-9e48-41e8-bb3d-f676a3b91c76",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:58:13.969Z",
+      "updatedAt": "2025-07-24T04:58:13.969Z"
+    },
+    {
+      "id": "2bbbdeda-0948-4c13-a8ae-9bfc123ee725",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:58:23.382Z",
+      "updatedAt": "2025-07-24T04:58:23.382Z"
+    },
+    {
+      "id": "92cc1370-99b7-428c-8390-953c5ddaaca6",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:58:24.945Z",
+      "updatedAt": "2025-07-24T04:58:24.945Z"
+    },
+    {
+      "id": "b292529b-7c76-48f7-a138-993f9559a41c",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:02:56.552Z",
+      "updatedAt": "2025-07-24T05:02:56.552Z"
+    },
+    {
+      "id": "a2dba7b9-4335-4e72-b773-23bc9dbe0d25",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:02:57.494Z",
+      "updatedAt": "2025-07-24T05:02:57.494Z"
+    },
+    {
+      "id": "dd12b684-f52d-4b83-a6f2-cc3d953c2515",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:10.762Z",
+      "updatedAt": "2025-07-24T05:03:10.762Z"
+    },
+    {
+      "id": "5985029b-785f-465a-8c4f-862708c6929f",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:12.319Z",
+      "updatedAt": "2025-07-24T05:03:12.319Z"
+    },
+    {
+      "id": "cdc2539a-7adf-44c0-965c-3bc7b4a704d1",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:18.322Z",
+      "updatedAt": "2025-07-24T05:03:18.322Z"
+    },
+    {
+      "id": "b82bb6f5-47aa-4531-a283-5466e5e50d81",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:19.570Z",
+      "updatedAt": "2025-07-24T05:03:19.570Z"
+    },
+    {
+      "id": "efd438df-91d3-46d3-9aa5-62399eef8150",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:21.029Z",
+      "updatedAt": "2025-07-24T05:03:21.029Z"
+    },
+    {
+      "id": "e944d2f1-1321-415c-8038-3db5a0d662d5",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:25.464Z",
+      "updatedAt": "2025-07-24T05:03:25.464Z"
+    },
+    {
+      "id": "a31071d1-beac-4b54-b7b5-c544cb73ae32",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-24T05:03:32.769Z",
+      "updatedAt": "2025-07-24T05:03:32.769Z"
+    },
+    {
+      "id": "105ad49f-bcfb-4f0a-b72b-d426318731b9",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-24T05:03:34.260Z",
+      "updatedAt": "2025-07-24T05:03:34.260Z"
+    },
+    {
+      "id": "11f14ca7-805f-40e2-baf0-6977f4622478",
+      "userId": "a52d1346-9cad-4da0-b459-7839a09b499b",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-24T05:03:35.521Z",
+      "updatedAt": "2025-07-24T05:03:35.521Z"
+    },
+    {
+      "id": "146bcb69-e8e5-4f59-bf42-05cbb2b97425",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:40.149Z",
+      "updatedAt": "2025-07-24T05:03:40.149Z"
+    },
+    {
+      "id": "8656d137-bf44-4f45-8a07-6d4d63f150a0",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:41.270Z",
+      "updatedAt": "2025-07-24T05:03:41.270Z"
+    },
+    {
+      "id": "dd13f45d-eb73-4148-86a0-8b7a1ab3d6d8",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:44.046Z",
+      "updatedAt": "2025-07-24T05:03:44.046Z"
+    },
+    {
+      "id": "4ab7d5d2-464f-4dde-8391-90de1d9fdf5c",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:55.516Z",
+      "updatedAt": "2025-07-24T05:03:55.516Z"
+    },
+    {
+      "id": "8bd37c39-805d-498a-a30d-8511887da3e7",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:56.230Z",
+      "updatedAt": "2025-07-24T05:03:56.230Z"
+    },
+    {
+      "id": "34fe3024-2863-4562-8406-93d8f2dfe927",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:03:56.658Z",
+      "updatedAt": "2025-07-24T05:03:56.658Z"
+    },
+    {
+      "id": "b1169e70-839b-4c5b-90a9-705679bb779e",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:04:36.497Z",
+      "updatedAt": "2025-07-24T05:04:36.497Z"
+    },
+    {
+      "id": "c2f11ad2-c2a9-413e-b9fb-35a6bd17a60c",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-24T05:04:45.338Z",
+      "updatedAt": "2025-07-24T05:04:45.338Z"
+    },
+    {
+      "id": "117f13c5-fc5b-412a-8c57-040e493a929c",
+      "userId": "7291cb2d-8194-4dbd-a281-81d59354ba10",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T05:11:00.469Z",
+      "updatedAt": "2025-07-24T05:11:00.469Z"
+    },
+    {
+      "id": "d24b3ea8-6cb2-466f-9277-81dfe7579edc",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T06:09:51.867Z",
+      "updatedAt": "2025-07-24T06:09:51.867Z"
+    },
+    {
+      "id": "0accbecb-0445-41c6-9dc4-6553adee6901",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T06:09:52.521Z",
+      "updatedAt": "2025-07-24T06:09:52.521Z"
+    },
+    {
+      "id": "0eb12d5c-d0e5-4776-ba3d-9a1e19a64c0a",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T06:13:22.176Z",
+      "updatedAt": "2025-07-24T06:13:22.176Z"
+    },
+    {
+      "id": "5f45434b-d650-4283-9476-57b892a87afc",
+      "userId": "22e09a9c-fc92-4cea-ade3-a7063e37ebda",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T06:13:23.735Z",
+      "updatedAt": "2025-07-24T06:13:23.735Z"
+    },
+    {
+      "id": "c3c4b4b9-f91a-412f-8537-7fbbba226355",
+      "userId": "ac4393aa-d370-445f-82da-34f75d489c61",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T07:06:35.062Z",
+      "updatedAt": "2025-07-24T07:06:35.062Z"
+    },
+    {
+      "id": "3e11c77e-2688-409d-ba29-1bb1df8d641d",
+      "userId": "ac4393aa-d370-445f-82da-34f75d489c61",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T07:06:42.888Z",
+      "updatedAt": "2025-07-24T07:06:42.888Z"
+    },
+    {
+      "id": "6c9ae44a-c803-4057-9fd0-cf5dc1541f89",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:28:56.984Z",
+      "updatedAt": "2025-07-24T13:28:56.984Z"
+    },
+    {
+      "id": "1948f73a-27d9-434a-9ec4-bff9c6d2e6b3",
+      "userId": "ac4393aa-d370-445f-82da-34f75d489c61",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T07:06:32.340Z",
+      "updatedAt": "2025-07-24T07:46:29.634Z"
+    },
+    {
+      "id": "fcee099e-b3db-416b-a665-3dd35016c884",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:28:58.411Z",
+      "updatedAt": "2025-07-24T13:28:58.411Z"
+    },
+    {
+      "id": "002ece58-827d-406f-b476-746b7f541d9e",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:28:58.730Z",
+      "updatedAt": "2025-07-24T13:28:58.730Z"
+    },
+    {
+      "id": "78dd009f-d0c1-4b6f-9cb4-83321d5f8314",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:20.734Z",
+      "updatedAt": "2025-07-24T13:29:20.734Z"
+    },
+    {
+      "id": "3682eb1f-d0aa-4cf8-ba81-e23e0e6babd2",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:22.041Z",
+      "updatedAt": "2025-07-24T13:29:22.041Z"
+    },
+    {
+      "id": "612aeb24-ac4a-45f0-ba05-e7e99b1b5863",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:51:27.862Z",
+      "updatedAt": "2025-07-27T05:32:18.898Z"
+    },
+    {
+      "id": "6679635f-7bd5-4b65-84fc-6d67bdba202e",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-17T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:22.641Z",
+      "updatedAt": "2025-07-24T13:29:22.641Z"
+    },
+    {
+      "id": "aa65c57f-27fd-49f2-a36b-1bd76df9051e",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:30.429Z",
+      "updatedAt": "2025-07-24T13:29:30.429Z"
+    },
+    {
+      "id": "b0afaee8-aa75-4d42-8cfb-31965dd4d4fc",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-19T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:31.478Z",
+      "updatedAt": "2025-07-24T13:29:31.478Z"
+    },
+    {
+      "id": "b3fa1bfa-d7d4-47de-9d99-2a9e7efd6f8b",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:46.846Z",
+      "updatedAt": "2025-07-24T13:29:46.846Z"
+    },
+    {
+      "id": "bb5b3e40-3857-4050-ae94-4454b6d3d4a5",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:47.968Z",
+      "updatedAt": "2025-07-24T13:29:47.968Z"
+    },
+    {
+      "id": "f1fd2b47-2eb4-4b85-bb7a-6760ee50248c",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:25.333Z",
+      "updatedAt": "2025-07-24T13:29:25.333Z"
+    },
+    {
+      "id": "c3ff8145-4f2f-4f4b-856c-37e2ba8802ae",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-18T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:27.328Z",
+      "updatedAt": "2025-07-24T13:29:27.328Z"
+    },
+    {
+      "id": "ea574588-7828-491d-8b85-91bb06111f8e",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:36.717Z",
+      "updatedAt": "2025-07-24T13:29:36.717Z"
+    },
+    {
+      "id": "4f5db452-55b5-4224-883a-2341cd5f3354",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:37.783Z",
+      "updatedAt": "2025-07-24T13:29:37.783Z"
+    },
+    {
+      "id": "2c92fcff-6fe8-4b0f-a8db-3811db51f4d8",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "fdfc11f6-bc42-4082-ba44-95618caf8681",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:41.577Z",
+      "updatedAt": "2025-07-24T13:29:41.577Z"
+    },
+    {
+      "id": "09d7c839-3694-429a-866a-7cb706b3337f",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:42.536Z",
+      "updatedAt": "2025-07-24T13:29:42.536Z"
+    },
+    {
+      "id": "8a102907-0654-491c-a3f9-a35c8e98dbc8",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T13:29:43.794Z",
+      "updatedAt": "2025-07-24T13:29:43.794Z"
+    },
+    {
+      "id": "675a5031-39a1-43fe-a52d-9af2763c452b",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T15:26:00.391Z",
+      "updatedAt": "2025-07-24T15:26:00.391Z"
+    },
+    {
+      "id": "785b7a58-ca2e-412e-b5e8-dc69ebee56c8",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T15:26:01.896Z",
+      "updatedAt": "2025-07-24T15:26:01.896Z"
+    },
+    {
+      "id": "5358fda1-def5-40c5-b6fe-c80d24061f32",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T15:26:03.664Z",
+      "updatedAt": "2025-07-24T15:26:03.664Z"
+    },
+    {
+      "id": "9c91a2c9-34b1-4fd8-9a57-113765adb609",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T15:26:17.247Z",
+      "updatedAt": "2025-07-24T15:26:17.247Z"
+    },
+    {
+      "id": "e6b502fb-1f7e-462c-8079-1482f2e632ec",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-23T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T15:26:18.134Z",
+      "updatedAt": "2025-07-24T15:26:18.134Z"
+    },
+    {
+      "id": "05957e3d-63c0-4add-b1fa-a973c273a037",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-22T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T15:26:51.722Z",
+      "updatedAt": "2025-07-24T15:26:51.722Z"
+    },
+    {
+      "id": "5b457fc1-aa49-4d73-8b7f-b05268dbffc1",
+      "userId": "5637ad5b-4d08-443a-9828-ba814d85df39",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-21T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-22T05:45:43.785Z",
+      "updatedAt": "2025-07-24T15:27:15.305Z"
+    },
+    {
+      "id": "596e1500-f13b-4ce6-ab37-58baf2aa84a1",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-25T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-25T05:40:40.661Z",
+      "updatedAt": "2025-07-25T05:40:40.661Z"
+    },
+    {
+      "id": "5919b831-633d-49e8-8bdf-9fcecafcb952",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-25T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-25T05:40:42.295Z",
+      "updatedAt": "2025-07-25T05:41:19.017Z"
+    },
+    {
+      "id": "b70c171b-0455-4b82-9927-ba0bd5db55c7",
+      "userId": "002933dd-8e90-4444-971c-341d3f84c92f",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-25T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-25T05:45:07.616Z",
+      "updatedAt": "2025-07-25T05:45:07.616Z"
+    },
+    {
+      "id": "a8a85dde-2303-43a0-94b1-f16e261290fa",
+      "userId": "1802b54b-b77f-45b1-ba69-4f3f3c492527",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-25T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-25T06:12:26.340Z",
+      "updatedAt": "2025-07-25T06:12:26.340Z"
+    },
+    {
+      "id": "bfc95c31-3a61-4489-9a09-011a27ff69da",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-26T05:42:21.720Z",
+      "updatedAt": "2025-07-26T05:42:21.720Z"
+    },
+    {
+      "id": "ccda2e0f-b4ca-49d5-bdfb-375554575093",
+      "userId": "4cd7e9e3-7932-4f87-a31c-9fb58d9574f0",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-26T05:42:22.803Z",
+      "updatedAt": "2025-07-26T05:42:22.803Z"
+    },
+    {
+      "id": "908b6113-f047-4e6b-a542-b850b1fca5e4",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "CANCELLED",
+      "createdAt": "2025-07-26T05:57:42.958Z",
+      "updatedAt": "2025-07-26T05:57:42.958Z"
+    },
+    {
+      "id": "57b8c82d-86ce-40e4-9e11-93330583c4b1",
+      "userId": "a5f27f67-b2f5-446c-bc82-e5ba79c028f9",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "CANCELLED",
+      "createdAt": "2025-07-26T05:57:44.213Z",
+      "updatedAt": "2025-07-26T05:57:44.213Z"
+    },
+    {
+      "id": "caf486bc-ebf0-4655-b3a8-874e55d271cc",
+      "userId": "b4261b4f-6d0b-4564-bf61-bc8031ae438d",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-26T17:32:32.303Z",
+      "updatedAt": "2025-07-26T17:32:32.303Z"
+    },
+    {
+      "id": "7ac73370-1434-46cd-b338-667549d5d606",
+      "userId": "b4261b4f-6d0b-4564-bf61-bc8031ae438d",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-26T17:32:32.908Z",
+      "updatedAt": "2025-07-26T17:32:32.908Z"
+    },
+    {
+      "id": "ab7f78f0-bad9-43e3-a62a-b01c3723fffb",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-27T05:32:07.060Z",
+      "updatedAt": "2025-07-27T05:32:07.060Z"
+    },
+    {
+      "id": "f9b6d6c4-0564-46cf-a33c-3ead539f08c0",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-27T05:32:08.616Z",
+      "updatedAt": "2025-07-27T05:32:08.616Z"
+    },
+    {
+      "id": "d059a4de-f212-44b4-85ae-ddcc03593627",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:49:29.453Z",
+      "updatedAt": "2025-07-27T05:32:15.972Z"
+    },
+    {
+      "id": "b0b42b27-8f3b-4498-a5f6-602f03140eb8",
+      "userId": "b5db09ba-ce0d-4c51-aacb-5c92d0056fbf",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-24T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-24T04:51:25.151Z",
+      "updatedAt": "2025-07-27T05:32:17.363Z"
+    },
+    {
+      "id": "e9f2e356-e8c9-4186-b01d-607272bc0de4",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-25T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-28T05:10:53.374Z",
+      "updatedAt": "2025-07-28T05:10:53.374Z"
+    },
+    {
+      "id": "4ad2d71e-5d6d-4370-8ebc-6d60c6b2c16e",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "09b264c3-9ead-44ed-91b5-3abb6a0e0b3d",
+      "date": "2025-07-25T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-28T05:10:55.273Z",
+      "updatedAt": "2025-07-28T05:10:55.273Z"
+    },
+    {
+      "id": "d32615a7-bcfe-43db-bd15-c982ad86a5cd",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "eb27e6d7-ccf7-4d72-ad8d-0426b97775b7",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-28T05:11:02.601Z",
+      "updatedAt": "2025-07-28T05:11:02.601Z"
+    },
+    {
+      "id": "2779dd1c-9b9c-4c0f-a37f-4a17926ff3e6",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "8e180caf-b63f-4b2e-80ae-d404286f887e",
+      "date": "2025-07-26T00:00:00.000Z",
+      "status": "PRESENT",
+      "createdAt": "2025-07-28T05:11:04.474Z",
+      "updatedAt": "2025-07-28T05:11:04.474Z"
+    },
+    {
+      "id": "c1fdfecc-260a-44d2-bf44-e6d2469ddeb6",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e3523c25-7be1-4778-a728-a9d8fe097413",
+      "date": "2025-07-28T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-28T05:11:48.252Z",
+      "updatedAt": "2025-07-28T05:12:17.272Z"
+    },
+    {
+      "id": "b0c2e18e-7701-486b-b267-27ca773dbdfb",
+      "userId": "98d3467f-8eac-4daa-b54f-ad8a2ebd512a",
+      "subjectId": "e22a008a-1cfc-41d4-853d-366fdb27bc04",
+      "date": "2025-07-28T00:00:00.000Z",
+      "status": "ABSENT",
+      "createdAt": "2025-07-28T05:11:46.815Z",
+      "updatedAt": "2025-07-28T05:12:22.435Z"
+    }
+  ]
+}

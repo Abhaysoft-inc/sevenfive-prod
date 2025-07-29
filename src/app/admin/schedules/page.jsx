@@ -19,7 +19,9 @@ const ScheduleManagementPage = () => {
         subjectId: '',
         dayOfWeek: '',
         startTime: '',
-        endTime: ''
+        endTime: '',
+        validFrom: '',
+        validTo: ''
     });
 
     const router = useRouter();
@@ -122,7 +124,9 @@ const ScheduleManagementPage = () => {
                         subjectId: formData.subjectId,
                         dayOfWeek: formData.dayOfWeek,
                         startTime: formData.startTime,
-                        endTime: formData.endTime
+                        endTime: formData.endTime,
+                        validFrom: formData.validFrom,
+                        validTo: formData.validTo || null
                     }),
                 });
 
@@ -136,7 +140,7 @@ const ScheduleManagementPage = () => {
                 }
             } else {
                 // For creating, handle multiple batches
-                const promises = formData.batchIds.map(batchId => 
+                const promises = formData.batchIds.map(batchId =>
                     fetch('/api/admin/schedules', {
                         method: 'POST',
                         headers: {
@@ -147,14 +151,16 @@ const ScheduleManagementPage = () => {
                             subjectId: formData.subjectId,
                             dayOfWeek: formData.dayOfWeek,
                             startTime: formData.startTime,
-                            endTime: formData.endTime
+                            endTime: formData.endTime,
+                            validFrom: formData.validFrom,
+                            validTo: formData.validTo || null
                         }),
                     })
                 );
 
                 const responses = await Promise.all(promises);
                 const failedResponses = responses.filter(response => !response.ok);
-                
+
                 if (failedResponses.length === 0) {
                     const batchCount = formData.batchIds.length;
                     setSuccess(`${batchCount} schedule${batchCount > 1 ? 's' : ''} created successfully!`);
@@ -185,7 +191,9 @@ const ScheduleManagementPage = () => {
             subjectId: schedule.subjectId,
             dayOfWeek: schedule.dayOfWeek,
             startTime: schedule.startTime,
-            endTime: schedule.endTime
+            endTime: schedule.endTime,
+            validFrom: schedule.validFrom ? new Date(schedule.validFrom).toISOString().split('T')[0] : '',
+            validTo: schedule.validTo ? new Date(schedule.validTo).toISOString().split('T')[0] : ''
         });
         setShowModal(true);
     };
@@ -226,7 +234,9 @@ const ScheduleManagementPage = () => {
             subjectId: '',
             dayOfWeek: '',
             startTime: '',
-            endTime: ''
+            endTime: '',
+            validFrom: '',
+            validTo: ''
         });
         setShowModal(true);
     };
@@ -239,7 +249,9 @@ const ScheduleManagementPage = () => {
             subjectId: '',
             dayOfWeek: '',
             startTime: '',
-            endTime: ''
+            endTime: '',
+            validFrom: '',
+            validTo: ''
         });
     };
 
@@ -353,9 +365,9 @@ const ScheduleManagementPage = () => {
                                     const daySchedules = schedules
                                         .filter(schedule => schedule.dayOfWeek === day)
                                         .sort((a, b) => a.startTime.localeCompare(b.startTime));
-                                    
+
                                     if (daySchedules.length === 0) return null;
-                                    
+
                                     return (
                                         <div key={day} className="border border-gray-200 rounded-lg overflow-hidden">
                                             <div className="bg-gray-50 px-4 py-3 border-b border-gray-200">
@@ -419,7 +431,7 @@ const ScheduleManagementPage = () => {
                             <h2 className="text-xl font-bold mb-4">
                                 {editingSchedule ? 'Edit Schedule' : 'Create New Schedule'}
                             </h2>
-                            
+
                             <form onSubmit={handleSubmit}>
                                 <div className="space-y-4">
                                     <div>
@@ -565,6 +577,34 @@ const ScheduleManagementPage = () => {
                                                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                                                 required
                                             />
+                                        </div>
+                                    </div>
+
+                                    <div className="grid grid-cols-2 gap-4">
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                Valid From <span className="text-red-500">*</span>
+                                            </label>
+                                            <input
+                                                type="date"
+                                                value={formData.validFrom}
+                                                onChange={(e) => setFormData({ ...formData, validFrom: e.target.value })}
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                                required
+                                            />
+                                            <p className="text-xs text-gray-500 mt-1">When this schedule becomes effective</p>
+                                        </div>
+                                        <div>
+                                            <label className="block text-sm font-medium text-gray-700 mb-1">
+                                                Valid To (Optional)
+                                            </label>
+                                            <input
+                                                type="date"
+                                                value={formData.validTo}
+                                                onChange={(e) => setFormData({ ...formData, validTo: e.target.value })}
+                                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                            />
+                                            <p className="text-xs text-gray-500 mt-1">Leave empty for ongoing schedule</p>
                                         </div>
                                     </div>
                                 </div>
